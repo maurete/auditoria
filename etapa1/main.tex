@@ -1,0 +1,205 @@
+\documentclass[a4paper,11pt,oneside]{article}
+%
+% importar el archivo conf/packages.tex
+\include{conf/packages}
+%
+% ===
+% === Propiedades del documento: título, autor, etc
+% ===
+%
+\newcommand{\titulo}{{\large FICH --- UNL}\\
+  Auditoría Informática -- 2010\\
+  {Trabajo Final, Etapa 1: Presentación de la Organización}}
+\newcommand{\autor}{Galarza, Romina \and Mastaglia, Nicolás \and Torrez, Mauro}
+\newcommand{\fecha}{\today}
+\newcommand{\tituloPDF}{Auditoría}
+\newcommand{\autorPDF}{Mauro Torrez}
+\newcommand{\asuntoPDF}{MNS GTP2}
+\newcommand{\clavesPDF}{MNS GTP2}
+%
+% importar los archivos conf/config.tex y conf/comandos.tex
+\include{conf/config}
+\include{conf/comandos}
+\include{conf/fuentes}
+%
+% ===
+% === Inicio del documento
+% === 
+%
+\begin{document}
+% crear la página de título
+\maketitle
+%
+%\tit*{Etapa}
+
+\section{Presentación de la organización}
+
+Realizaremos el trabajo de auditoría en Rectorado de la Universidad
+Nacional del Litoral.
+
+El Rectorado, es el lugar físico en donde se encuentran situados las
+estructuras administrativas y gubernamentales de la Universidad
+Nacional del Litoral. Allí se ejecutan gran parte de las actividad
+planificadas por el Rector, la Asamblea Universitaria, el Consejo
+Superior y cualquier otra área perteneciente a la Gestión de la UNL.
+
+(Organigrama)
+
+\section{Presentación y organización del área de sistemas de información}
+
+El area de sistemas de información es la Dirección de Informatización
+y Planificación Tenológica la cual se encarga de llevar a cabo las
+tareas de desarrollo, mantenimiento y administracion de recursos
+informáticos, servidores, aplicaciones y soporte técnicos a los
+usuarios finales en el rectorado.
+
+\subsection*{Estructura}
+
+Este área cuenta con 30 empleados y se subdivide en los siguientes sectores:
+
+\subsubsection*{Cómputos}
+
+Se encarga del desarrollo, mantenimiento y soporte técnico del sistema de gestión de personal SIU Pampa y de la impresión de los recibos de sueldo.
+
+\subsubsection*{Desarrollo}
+
+Su función se basa en el desarrollo, mantenimiento y soporte técnico de los sistemas contable SIU Pilagá, de gestión de alumnos SIU Guaraní, entre otros.
+
+\subsubsection*{Administración}
+
+Se ocupa de la implementación y del correcto funcionamiento de los servidores (correo, web, sistemas, etc) y la compra de equipamiento de red y servidores.
+
+\subsubsection*{Seguridad}
+
+Es un puesto nuevo, que se encarga de la inspección y revisión de la seguridad de los sistemas.
+
+\subsubsection*{Soporte técnico}
+
+Este sector provee asistencia técnica a los usuarios en sus puestos de trabajo.
+
+(Organigrama)
+
+\section*{3 Estrategias informáticas a corto, mediano y largo plazo}
+
+
+La planificacion de las estrategias infomáticas se da mayormente en la parte de administración junto con el director del área. 
+Entre las estrategias a corto plazo podemos citar:
+
+\subsection*{Mantenimiento y soporte al usuario}
+
+Entre las estrategias a mediano plazo podemos citar:
+
+h3. Plan de contingencia ante fallas eléctricas.
+
+Se está desarrollando actualmente y consiste en la instalación de un UPS y un grupo electrógeno.
+
+h3. Migración y actualización del servidor de correo.
+
+\subsection*{Proyecto /oficina}
+
+Consiste en brindar a las distintas oficinas del rectorado, su propio espacio web tanto en intranet como en internet, a través de un CMS otorgándole mejoras en la administración, compartición y publicación de documentos.
+
+\section*{4Hardware}
+
+El hardware que esta disponible en rectorado esta debidamente inventariado por la Dirección de patrimonio.
+
+Listamos el hardware disponible en cada piso:
+
+\subsection*{Piso 3}
+
+En este piso encontramos la DIPT y la oficina de Personal.
+
+\subsubsection*{DIPT}
+
+* 27 workstations
+* 2 notebooks
+* 2 impresoras
+* 1 multifución
+* 5 teléfonos
+* 5 aires acondicionados
+* 1 cañón
+
+A su vez dentro de la DIPT encontramos la sala de servidores que cuenta con:
+
+* router raíz
+* switches raiz
+* aire acondicionado
+* racks con servidores
+* UPS
+
+\subsubsection*{Personal}
+
+* 20 workstations
+* 6 impresoras
+* 1 multifución
+* 9 teléfonos
+* 2 aires acondicionados
+
+h3. Piso 2
+
+\subsubsection*{DGA}
+
+* 26 workstations
+* 16 impresoras
+* 1 multifución
+* 16 teléfonos
+* 3 aires acondicionados
+* 3 switch
+* 2 fax
+
+\section*{5 Software}
+
+h3. Software base:
+
+\subsubsection*{Sistema operativo}
+ 
+* Windows XP 
+* Debian GNU/Linux
+
+\subsubsection*{Antivirus}
+
+* Avira, AVG, Nod 32
+
+\subsubsection*{Base de datos:}
+
+* PostgresSQL
+
+h3. Software aplicativo:
+
+\subsubsection*{Software de programación}
+
+* Lenguajes: java, PHP, ASP
+
+\section*{6 Esquema de telecomunicaciones}
+
+\section*{7 Normativa Interna}
+
+Existen determinadas normativas respecto del uso de la red, impuestas desde arriba desde el CETUL, que es el órgano encargado del manejo e interconexión desde la Universidad a Internet y otras redes externas, y provee de conexión a las diferentes instituciones de la UNL.
+
+Los usuarios deben firmar un acuerdo de conformidad tanto al solicitar la creación de una cuenta de correo de rectorado, como al requerir la habilitación de una nueva computadora en la red.
+
+Algunos de los puntos de este acuerdo de conformidad establecen lo siguiente:
+
+ * Prohibición de utilizar los servicios de la red para uso comercial particular,
+ * Prohibición del uso de la red con fnes de hackeo/cracking, y difusión de virus/spyware/malware
+ * Prohibición de la utilización de la cuenta de correo electrónico para envío de spam
+
+h3. Procedimientos internos
+
+* Atención a usuarios: el siguiente esquema se sigue para brindar soporte técnico a los usuarios:
+  1. Los usuarios inician una solicitud de soporte técnico llamando a un número telefónico dispuesto a tal efecto.
+  2. Se asigna un número de caso completando un "ticket" en un sistema de seguimiento.
+  3. El técnico se encarga de revisar la lista de tareas pendientes, asignándose de la lista para atender el caso, realizando un seguimiento en el sistema por cada uno.
+  4. Una vez resuelto el problema, se cierra el caso en el sistema.
+* Tickets: el sistema de tickets es utilizado por casi todos los sectores del área, siendo a través de este sistema la forma más común entre los distintos sectores del área de Informática.
+* Software libre: salvo casos excepcionales, la política de rectorado establece que sólo se utilizará software libre en las estaciones de trabajo.
+* Software del SIU: la UNL adhiere al consorcio SIU, lo que implica que la mayoría de los sistemas de la Universidad provienen de SIU.
+
+\section*{8 Relaciones con terceros}
+
+\section*{9 Politicas de selección, capacitación y entrenamiento de personal}
+
+No existen políticas específicas para la selección del personal más allá de la idoneidad, experiencia, etc.
+
+\section*{10 Identificacion de problemas, necesidades e incertidumbres existentes en la organización}
+\end{document}
