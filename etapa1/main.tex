@@ -270,14 +270,26 @@ se utiliza PostgresSQL como motor de base de datos principal.
 %
 \subsubsection*{Software de programación}
 %
-Para el desarrollo de los sistemas propios se utiliza principalmente el lenguaje Java, y el software de SIU esta desarrollado principalmente en PHP. Tambien encontramos sistemas en ASP.
+Para el desarrollo de los sistemas propios se utiliza principalmente
+el lenguaje Java, y el software de SIU esta desarrollado
+principalmente en PHP. Tambien encontramos sistemas en ASP.
 
 Las IDEs que se utilizan son Netbeans, Eclipse y GNU Emacs.
 
-Se utiliza el sistema de versionado de código SVN mantenido por los administradores en un respositorio centralizado en los servidores propios.
-
+Se utiliza el sistema de versionado de código SVN mantenido por los
+administradores en un respositorio centralizado en los servidores
+propios.
+%
 \section{Esquema de telecomunicaciones}
+La topología de la red es bastante sencilla, la raíz está junto al router que conecta a la red externa y a la vez éste conecta a través de una fibra óptica con el switch al cual estan conectados los servidores y a los switches principales en los distintos pisos.
 
+En la figura \ref{topologia} vemos gráficamente estas conexiones.
+%
+\begin{figure}
+  \center\includegraphics[height=89mm]{img/red}
+  \caption{Esquema de la topología de la red en el Rectorado.}
+  \label{topologia}
+\end{figure}
 \section{Normativa Interna}
 %
 Existen determinadas normativas respecto del uso de la red, impuestas
@@ -328,10 +340,13 @@ siguiente:
 \end{description}
 %
 \section{Relaciones con terceros}
-
+%
 \section{Politicas de selección, capacitación y entrenamiento de personal}
-
 No existen políticas específicas para la selección del personal más allá de la idoneidad, experiencia, etc.
-
+%
 \section{Identificacion de problemas, necesidades e incertidumbres existentes en la organización}
+\begin{itemize*}
+\item Falta de inforcement de las políticas estandares del software.
+\item 
+\end{itemize*}
 \end{document}
