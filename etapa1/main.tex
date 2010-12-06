@@ -350,47 +350,78 @@ allá de la idoneidad, experiencia, etc.
 \section{Identificacion de problemas, necesidades e incertidumbres existentes en la organización}
 %
 \subsection*{Seguridad física}
- - fallas eléctricas
- - acceso no autorizado
- - fallas del aire acondicionado
- 
+Actualmente no existe un plan de contingencia ante eventuales fallas
+en el suministro eléctrico. La oficina cuenta con un UPS centralizado
+que permite mantener el suministro eléctrico en las PCs de los
+usuarios y los servidores durante unos 10 minutos. Es bastante común
+que ocurran fallas en los servidores luego de restablecido el
+suministro eléctrico.
+
+El acceso físico de las personas no está controlado, existiendo la
+posibilidad de que ingrese alguna persona malintencionada y ocurra por
+ejemplo robo de equipamiento. Esta posibilidad aumenta durante la
+tarde, cuando hay pocas personas trabajando en el lugar.
+
+En la sala de servidores, una falla en el acondicionador de aire
+podría traer problemas serios, especialmente en verano, dado que no
+existe un acondicionador de ``back-up'' en caso que falle el
+principal.
+%
 \subsection*{Seguridad lógica}
- - control de acceso no autorizado a la red
- - contraseñas no encriptadas
- - servidor smtp no autenticado
- - control de datos sensibles
- - control de configuración en las pcs de los usuarios
+En todo el Rectorado la red a la que se conectan las estaciones de
+trabajo es cableada (Ethernet), no hay servicio de Wi-Fi provisto por
+la DIPT. Para el acceso a la red física, el usuario debe solicitar la
+habilitación de su PC en la red mediante el llenado de un
+formulario. Sin embargo, un sujeto malintencionado puede conectar
+directamente una PC y habilitar su funcionamiento en la red sin pedir
+autorización. Esto es posible dado que no existe ningún tipo de filtro
+respecto de quiénes se conectan a la red.
 
+La DIPT provee un servidor LDAP que se utiliza para autenticar las
+cuentas de los usuarios al iniciar sesión. Este mecanismo de
+autenticación se realiza en muchos casos en forma no encriptada, lo
+que implica que alguien con conocimientos básicos de ``sniffing''
+puede capturar las claves de los usuarios.
+
+El servicio de correo electrónico que se ofrece utiliza un servidor de
+salida SMTP no autenticado, con la única restricción de que el equipo
+que se conecta para enviar correos esté dentro de la red interna. Han
+ocurrido casos en que computadoras infectadas por ``botnets'' han
+enviado masivamente correos electrónicos con spam.
+
+Otro problema de falta de seguridad encontramos en la forma en que los usuarios
+de Windows comparten sus archivos. En muchos casos, se da que lo hacen sin
+protegerlos con contraseña, lo que hace que cualquiera con acceso a la red
+pueda tomar el control de sus archivos.
+
+En definitiva, cualquier persona con conocimientos suficientes que consiga
+enchufar su PC en la red interna, tiene una capacidad potencial de provocar
+daños a los sistemas, principalmente en las PCs de los usuarios.
+%
 \subsection*{Riesgos e incertidumbres}
- - proyectos abortados
- - concentración de confianza en una persona
- - implementación de los sistemas
- 
-\subsection*{Problemas}
- - soporte técnico saturado
- - falta de capacitación del personal
+%
+Es bastante común encontrarnos con que los proyectos se ``congelan'' y
+se terminan abortando, lo que puede estar indicando una falta de
+coordinación y de tiempo entre las diversas áreas involucradas.
 
-Al estar la Universidad asociada al consorcio SUI, se ve obligada a
-implementar los sistemas que éste desarrolla. Esto trae incovenientes
-al área de informática, ya que al no ser propios los sistemas no se
-puede tener previsibilidad acerca del rendimientos de los mismos hasta
-que no se implementan. Luego se complica la toma de decisiones
-respecto a los equipos a adquirir para proveer el nuevo servicio.
+Estos proyectos abortados los encontramos principalmente en las áreas
+de administración y de soporte técnico a los usuarios. Los encargados
+de estas áreas nos indican que se debe a la saturación de trabajo
+``corriente'', o del día a día, lo que hace que no quede tiempo para
+la planificación, investigación y capacitación necesaria para
+llevarlos adelante.
 
-Usuarios insatisfechos Los usuarios encuentran deficiencias en la
-funcionalidad de los sistemas.  el soporte técnico se demora, se les
-imponen los sistemas sin suficiente entrenamiento,
+Así también ocurre que en la implementación de los sistemas, sean
+tanto desarrollos propios como aquellos provistos por el SIU, existe
+falta de previsibilidad en cuanto a su rendimiento para el hardware
+disponible. Además, a los usuarios de estos sistemas se les brinda
+escasa capacitación respecto del funcionamiento de los mismos, en
+especial de aquellos que brinda el consorcio SIU.
 
-Falta de control en las workstations
-
-Proyectos estancados por ejemplo el proyecto de PAPET.
-
-\begin{enumerate}
-\item Falta de roles claros en el lugar
-\item Falta de políticas serias
-\item Falta de seguridad física: no hay control responsable del acceso
-  de personas fisicas
-\item Al no haber una adecuada planificación, existe incertidumbre con
-  los nuevos servicios
-\end{enumerate}
+Por último, hemos detectado que en la parte administración existe una
+única persona encargada de manejar todas las relaciones comerciales
+con los proveedores, lo que significa que no existe un control de
+éstas por parte del jefe de la dirección, y que cuando esta persona se
+ausenta se complican cosas tan corrientes como encargar la recarga de
+un tóner.
 \end{document}
