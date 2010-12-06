@@ -47,7 +47,7 @@ paticular.
 En la figura \ref{organi-rectorado} vemos un esquema básico de esta
 estructura.
 %
-\begin{figure}
+\begin{figure}[H]
   \center\includegraphics[width=127mm]{img/organi_rectorado}
   \caption{Organigrama del Rectorado}
   \label{organi-rectorado}
@@ -92,12 +92,13 @@ La DIPT cuenta con unos 30 empleados, y se subdivide en los siguientes
   de trabajo.
 \end{description}
 %
-\begin{figure}
+\begin{figure}[H]
   \center\includegraphics[width=127mm]{img/organi_dipt}
   \caption{Organigrama de la DIPT}
   \label{organi-dipt}
 \end{figure}
 %
+\newpage
 \section{Estrategias informáticas a corto, mediano y largo plazo}
 %
 La planificacion de las estrategias infomáticas se da mayormente en la
@@ -107,7 +108,7 @@ Entre las estrategias a corto plazo podemos citar:
 %
 \begin{description}
 \item[Mantenimiento y soporte al usuario:]
-  Día a día se proograman actividades de mantenimiento en los sistemas
+  Día a día se programan actividades de mantenimiento en los sistemas
   llevadas a cabo principalmente por el área de administración, y de
   mantenimiento y resolución de problemas en las estaciones de trabajo
   efectuadas por el área de soporte técnico.
@@ -123,7 +124,7 @@ Entre las estrategias a mediano plazo podemos citar:
 \begin{description}
 \item[Plan de contingencia ante fallas eléctricas:]
   Se está desarrollando actualmente y consiste en la instalación de un
-  UPS y un grupo electrógeno para evitar la caíde de los servidores en
+  UPS y un grupo electrógeno para evitar la caída de los servidores en
   caso de un eventual corte de energía.
 %
 \item[Migración y actualización del servidor de correo]
@@ -142,7 +143,7 @@ No existe planificación definida a realizar en el largo plazo.
 %
 \section{Hardware}
 %
-El inventario del hardware del Rectorado es llevado a cabo por la
+El inventario del hardware de Rectorado es llevado por la
 Dirección de Patrimonio, externa a la DIPT.
 
 A continuación, se presenta un resumen del hardware disponible en la
@@ -152,6 +153,7 @@ DIPT y algunos sectores del rectorado a modo de ejemplificación.
 %
 En este piso encontramos la DIPT y la oficina de Personal.
 %
+\newpage
 \subsubsection*{DIPT}
 %
 \begin{itemize*}
@@ -265,10 +267,10 @@ encontrar Microsoft Windows Vista y Windows 7, así como Ubuntu y
 Kubuntu GNU/Linux.
 %
 \subsubsection*{Antivirus}
-En esta organización no posee un antivirus preestablecido, el más
-utilizado es el Avira Free Editionque es el que instala el personal de
-soporte técnico en las máquinas de los usuarios, también encontramos
-el AVG y el Nod 32, entre otros.
+En la organización no existe un antivirus preestablecido, el más
+utilizado es el Avira Free Edition, que es el que instala el personal de
+soporte técnico en las máquinas de los usuarios. También encontramos
+el AVG Free Edition y el Nod 32, entre otros.
 %
 \subsubsection*{Base de datos}
 %
@@ -280,20 +282,20 @@ se utiliza PostgresSQL como motor de base de datos principal.
 \subsubsection*{Software de programación}
 %
 Para el desarrollo de los sistemas propios se utiliza principalmente
-el lenguaje Java, y el software de SIU esta desarrollado
-principalmente en PHP. Tambien encontramos sistemas en ASP.
+el lenguaje Java, y el software de SIU está desarrollado
+principalmente en PHP. También encontramos sistemas en ASP.
 
 Las IDEs que se utilizan son Netbeans, Eclipse y GNU Emacs.
 
-Se utiliza el sistema de versionado de código SVN mantenido por los
+Se utiliza el sistema de versionado de código SVN, mantenido por los
 administradores en un respositorio centralizado en los servidores
 propios.
 %
 \section{Esquema de telecomunicaciones}
-La topología de la red es bastante sencilla, la raíz está junto al
-router que conecta a la red externa y a la vez éste conecta a través
-de una fibra óptica con el switch al cual estan conectados los
-servidores y a los switches principales en los distintos pisos.
+La topología de la red es bastante sencilla, el switch raíz está junto
+al router que conecta a la red externa y a la vez éste conecta a
+través de una fibra óptica a los servdores y los switches principales
+en los distintos pisos.
 
 En la figura \ref{topologia} vemos gráficamente estas conexiones.
 %
@@ -302,16 +304,18 @@ En la figura \ref{topologia} vemos gráficamente estas conexiones.
   \caption{Esquema de la topología de la red en el Rectorado.}
   \label{topologia}
 \end{figure}
-\section{Normativa Interna}
+\section{Normativa interna}
 %
 Existen determinadas normativas respecto del uso de la red, impuestas
-desde arriba desde el CETUL, que es el órgano encargado del manejo e
-interconexión desde la Universidad a Internet y otras redes externas,
-y provee de conexión a las diferentes instituciones de la UNL.
+por el Centro de Telemática (CETUL), que es el órgano encargado del
+manejo e interconexión desde la Universidad a Internet y otras redes
+externas, y provee de conexión a las diferentes instituciones de la
+UNL.
 
 Los usuarios deben firmar un acuerdo de conformidad tanto al solicitar
-la creación de una cuenta de correo de rectorado, como al requerir la
-habilitación de una nueva computadora en la red.
+la creación de una cuenta de correo electrónico perteneciente al
+rectorado, como al requerir la habilitación de una nueva computadora
+en la red interna.
 
 Algunos de los puntos de este acuerdo de conformidad establecen lo
 siguiente:
@@ -319,10 +323,10 @@ siguiente:
 \begin{itemize*}
 \item Prohibición de utilizar los servicios de la red para uso
   comercial particular,
-\item Prohibición del uso de la red con fnes de hackeo/cracking, y
-  difusión de virus/spyware/malware
-\item Prohibición de la utilización de la cuenta de correo electrónico
-  para envío de spam
+\item prohibición del uso de la red con fines de hackeo/cracking, y
+  difusión de virus/spyware/malware,
+\item prohibición de la utilización de la cuenta de correo electrónico
+  para envío de spam.
 \end{itemize*}
 %
 \subsection*{Procedimientos internos de la DIPT}
@@ -331,35 +335,43 @@ siguiente:
 \item[Atención a usuarios:] el siguiente esquema se sigue para brindar
   soporte técnico a los usuarios:
   \begin{enumerate*}
-  \item Los usuarios inician una solicitud de soporte técnico llamando
+  \item Los usuarios inician una solicitud llamando
     a un número telefónico dispuesto a tal efecto.
-  \item Se asigna un número de caso completando un "ticket" en un
-    sistema de seguimiento.
+  \item Se asigna a la petición un número de caso completando un
+    ``ticket'' en un sistema de seguimiento.
   \item El técnico se encarga de revisar la lista de tareas
-    pendientes, asignándose de la lista para atender el caso,
-    realizando un seguimiento en el sistema por cada uno.
+    pendientes, asignándose un caso de la lista para atender,
+    realizando un seguimiento del progreso en el sistema.
   \item Una vez resuelto el problema, se cierra el caso en el sistema.
   \end{enumerate*}
 \item[Tickets:] el sistema de tickets es utilizado por casi todos los
-  sectores del área, siendo a través de este sistema la forma más
+  sectores del área, siendo éste la forma de comunicación más
   común entre los distintos sectores del área de Informática.
 \item[Software libre:] salvo casos excepcionales, la política de
   rectorado establece que sólo se utilizará software libre en las
-  estaciones de trabajo.
+  estaciones de trabajo y en los servidores.
 \item[Software del SIU:] la UNL adhiere al consorcio SIU, lo que
   implica que la mayoría de los sistemas de la Universidad provienen
-  de SIU.
+  del mismo.
 \end{description}
+%
 \section{Relaciones con terceros}
-En la DIPT la unica relacion que posee con terceros, es con
-...  que recurren a ellos cuando se necesitan insumos informáticos.
-
+Las relaciones con terceros que se manejan dentro de la DIPT son
+aquellas con los proveedores de hardware e insumos, y con las empresas
+que brindan soporte técnico a los equipos en casos que no puedan ser
+resueltos internamente.
+%
 \section{Politicas de selección, capacitación y entrenamiento de personal}
+%
+No existen políticas específicas para la selección del personal, más
+que un simple criterio basado en la idoneidad para el puesto y
+experiencia de trabajo previa, entre otros.
 
-No existen políticas específicas para la selección del personal más
-allá de la idoneidad, experiencia, etc.
-
-\section{Identificacion de problemas, necesidades e incertidumbres existentes en la organización}
+El personal de la Dirección realiza ocasionalmente cursos de
+capacitación relacionados con la actividad en la que trabajan día a
+día.
+%
+\section{Problemas, necesidades e incertidumbres existentes en la organización}
 %
 \subsection*{Seguridad física}
 Actualmente no existe un plan de contingencia ante eventuales fallas
@@ -367,9 +379,9 @@ en el suministro eléctrico. La oficina cuenta con un UPS centralizado
 que permite mantener el suministro eléctrico en las PCs de los
 usuarios y los servidores durante unos 10 minutos. Es bastante común
 que ocurran fallas en los servidores luego de restablecido el
-suministro eléctrico.
+suministro.
 
-El acceso físico de las personas no está controlado, existiendo la
+El acceso físico de las personas al lugar no está controlado, existiendo la
 posibilidad de que ingrese alguna persona malintencionada y ocurra por
 ejemplo robo de equipamiento. Esta posibilidad aumenta durante la
 tarde, cuando hay pocas personas trabajando en el lugar.
@@ -389,11 +401,12 @@ directamente una PC y habilitar su funcionamiento en la red sin pedir
 autorización. Esto es posible dado que no existe ningún tipo de filtro
 respecto de quiénes se conectan a la red.
 
-La DIPT provee un servidor LDAP que se utiliza para autenticar las
-cuentas de los usuarios al iniciar sesión. Este mecanismo de
-autenticación se realiza en muchos casos en forma no encriptada, lo
-que implica que alguien con conocimientos básicos de ``sniffing''
-puede capturar las claves de los usuarios.
+La DIPT provee un servidor de directorio \eng{LDAP} que se utiliza
+para autenticar las cuentas de los usuarios al iniciar sesión. Este
+mecanismo de autenticación se realiza en muchos casos en forma no
+encriptada, lo que implica que alguien con conocimientos básicos de
+técnicas conocidas como ``sniffing'' puede capturar las claves de los
+usuarios.
 
 El servicio de correo electrónico que se ofrece utiliza un servidor de
 salida SMTP no autenticado, con la única restricción de que el equipo
@@ -401,14 +414,15 @@ que se conecta para enviar correos esté dentro de la red interna. Han
 ocurrido casos en que computadoras infectadas por ``botnets'' han
 enviado masivamente correos electrónicos con spam.
 
-Otro problema de falta de seguridad encontramos en la forma en que los usuarios
-de Windows comparten sus archivos. En muchos casos, se da que lo hacen sin
-protegerlos con contraseña, lo que hace que cualquiera con acceso a la red
-pueda tomar el control de sus archivos.
+Otro problema de falta de seguridad lo encontramos en la forma en que
+los usuarios de Windows comparten sus archivos. En muchos casos, se da
+que lo hacen sin protegerlos con contraseña, lo que hace que
+cualquiera con acceso a la red pueda tomar el control de sus archivos.
 
-En definitiva, cualquier persona con conocimientos suficientes que consiga
-enchufar su PC en la red interna, tiene una capacidad potencial de provocar
-daños a los sistemas, principalmente en las PCs de los usuarios.
+En definitiva, cualquier persona con conocimientos suficientes que
+consiga enchufar su PC en la red interna, tiene una capacidad
+potencial de provocar daños a los sistemas, principalmente en las PCs
+de los usuarios.
 %
 \subsection*{Riesgos e incertidumbres}
 %
