@@ -107,39 +107,91 @@ parte de administración junto con el director de la Dirección.
 Entre las estrategias a corto plazo podemos citar:
 %
 \begin{description}
-\item[Mantenimiento y soporte al usuario:]
-  Día a día se programan actividades de mantenimiento en los sistemas
-  llevadas a cabo principalmente por el área de administración, y de
-  mantenimiento y resolución de problemas en las estaciones de trabajo
-  efectuadas por el área de soporte técnico.
-\item[Impresión de recibos de sueldo:]
-  Se planifica mensualmente en el área de Cómputos la impresión de los
-  recibos de sueldo de todo el personal en planta permanente de la
-  Universidad, que luego retiran las diversas instituciones para
-  entegar a su personal.
+%
+\item[Estandarización de los equipos GNU/Linux:] Actualmente los
+  equipos con GNU/Linux presentan deficiencias en la configuración, lo
+  que las hace inmantenibles. Por lo tanto es necesario reinstalarlas
+  con una versión de Debian estable y una configuración
+  normalizada. Esta tarea se está llevando a cabo lentamente debido a
+  la falta de personal. La configuración normalizada se logra mediante
+  la utilización de scripts desarrollados por personal de soporte
+  técnico y disponible en un repositorio SVN, que se ejecutan luego de
+  la instalación del sistema estándar.
+%
+\item[Actualización de los servidores a la nueva versión estable de
+  Debian:] Dado que se ha publicado una nueva versión del sistema
+  operativo GNU/Linux, se hace necesario actualizar el sistema en
+  estos y ajustar las configuraciones a las nuevas versiones de los
+  programas.
+%
+\item[Migración y actualización del servidor de correo:]
+  Consiste en la instalación de un nuevo servidor, y el traspaso de
+  datos desde el servidor actual.
+\item[Sistema de padrinos:]Se trata de desarrollar el software de
+  facturación e impresión de recibos para el programa padrinos que
+  esta dentro de la Secretaría de Vinculación, dado que el sistema
+  actual se encuentra obsoleto y con problemas graves de
+  usabilidad. Esta estrategia se encuadra dentro de las de mediano
+  plazo de implementación del sistema Ilitia.
+%
 \end{description}
 
 Entre las estrategias a mediano plazo podemos citar:
 %
 \begin{description}
-\item[Plan de contingencia ante fallas eléctricas:]
-  Se está desarrollando actualmente y consiste en la instalación de un
-  UPS y un grupo electrógeno para evitar la caída de los servidores en
-  caso de un eventual corte de energía.
+\item[Migración a software libre:] Con el desarrollo de esta
+  estrategia se pretende que todos los equipos de la red, tanto
+  clientes como servidores, ejecuten prácticamente sólo software
+  libre, basado en GNU/Linux como sistema operativo base.
 %
-\item[Migración y actualización del servidor de correo:]
-  Consiste en la instalación de un nuevo servidor, y el traspaso de
-  datos desde el servidor actual.
+\item[Capacitación a los usuarios:]
+Un punto fundamental, que requeriría atención inmediata luego de la
+migración sería la capacitación de los recursos humanos para enfrentar
+el cambio de sistema operativo y aplicaciones libres.
 %
-\item[Proyecto ``/oficina'':]
-  Este proyecto pretende brindar a las distintas oficinas del
-  rectorado, su propio espacio web tanto en la intranet como en
-  internet, a través de un CMS (\eng{Content Management System})
-  brindándole mejoras en la administración, compartición y publicación
-  de documentos.
+\item[Sistema Ilitia:]Es un sistema para la gestión de los servicios a
+  terceros (SATs/SETs) y todo tipo de relaciones
+  Universidad-Empresa. Este sistema es único en el sentido que no lo
+  provee el consorcio SIU, sino que es un desarrollo propio. Actualmente
+  se está comenzando a implementar en las distintas áreas de la
+  Secretaría de Vinculación.
+%
+\item[Adecuación de la sala de servidores:] Se debe agregar aire
+  acondicionado redundante, piso falso para la ubicación correcta del
+  cableado, control de acceso mediante llaves o dispositivo de clave y
+  evitar la existencia de elementos no propios de una sala de
+  servidores.
+%
+\item[Proyecto ``/oficina'':] Se trata del desarrollo e implementación
+  de un proyecto tipo CMS (\eng{Content Management System}) para
+  brindar a las distintas oficinas del rectorado su propio espacio web
+  tanto en la intranet como en internet, mejorando la administración,
+  compartición y publicación de archivos y documentos.
+\item [Guía de trámites online para los usuarios:]Poner a disposición
+  de los usuarios los formularios para realizar trámites que se
+  manejan en la oficina de informática, por ejemplo: solicitud de
+  habilitación de nodo, creación de cuentas de correos, gestión de
+  alias.
 \end{description}
+
+Entre las estrategias a largo plazo podemos citar:
 %
-No existe planificación definida a realizar en el largo plazo.
+\begin{description}
+\item[Seguridad:]Evitar la utilización de software ilegal, encontrar y
+  erradicar virus y programas maliciosos, definición de procedimientos
+  para protección de los datos, control de acceso a los recursos,
+  utilización de sistema de validación y encriptación para los
+  sistemas que manejan información sensible, securización de los
+  servidores de correo mediante autenticación y encriptación,
+  implementación de sistemas de detección de intrusos.
+\item[Puppets:]Es un sistema de control centralizado de la
+  configuración de los equipos, luego de una implementación fallida y
+  posterior caída en desuso, se pretende que el equipo de
+  administración y soporte técnico se capacite con este sistema y lo
+  ponga en funcionamiento para así gestionar la configuración de los
+  equipos de manera centralizada y prácticamente automática,
+  resultando una simplificación del trabajo del personal.
+\end{description}
 %
 \section{Hardware}
 %
@@ -375,8 +427,13 @@ día.
 %
 
 \resalt{Falta de redundancia en enlaces opticos}
+
 \resalt{caracteristicas de la sala de servidores}
-\resalt{El espacio de trabajo del personal de inform ́tica es inadecuado. El sector de inform ́tica, es el lugar que antes correspond al cuarto de reparaciones de servicio t ́cnico. No dispone del espacio fısico suficiente.}
+
+\resalt{El espacio de trabajo del personal de inform ́tica es
+  inadecuado. El sector de inform ́tica, es el lugar que antes
+  correspond al cuarto de reparaciones de servicio t ́cnico. No dispone
+  del espacio fısico suficiente.}
 
 
 \subsection*{Seguridad física}
@@ -392,6 +449,7 @@ El acceso físico de las personas al lugar no está controlado, existiendo la
 posibilidad de que ingrese alguna persona malintencionada y ocurra por
 ejemplo robo de equipamiento. Esta posibilidad aumenta durante la
 tarde, cuando hay pocas personas trabajando en el lugar.
+
 \resalt{No hay camaras}
 
 En la sala de servidores, una falla en el acondicionador de aire
@@ -467,4 +525,5 @@ con los proveedores, lo que significa que no existe un control de
 ausenta se complican cosas tan corrientes como encargar la recarga de
 un tóner.
 \resatl{Agregar detalles de como se maneja con las compras}
+
 \end{document}
