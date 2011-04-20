@@ -170,50 +170,61 @@ Entre las estrategias a mediano plazo podemos citar:
   %% migración sería la capacitación de los recursos humanos para
   %% enfrentar el cambio de sistema operativo y aplicaciones libres.
 %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% aca quedé --mau
 \item[Sistema Ilitia:]
-  Es un sistema para la gestión de los servicios a
-  terceros (SATs/SETs) y todo tipo de relaciones
-  Universidad-Empresa. Este sistema es único en el sentido que no lo
-  provee el consorcio SIU, sino que es un desarrollo propio. Actualmente
-  se está comenzando a implementar en las distintas áreas de la
-  Secretaría de Vinculación.
+  Se trata del desarrollo y puesta en funcionamiento del sistema, el
+  cual sirve para la gestión de los ``Servicios A Terceros Altamente
+  Especializados'' y ``Servicios Educativos a Terceros'' (SATs/SETs) y
+  demás aspectos de las relaciones Universidad--Empresas.  Dado que el
+  consorcio SIU no ofrece un sistema de este tipo, se ha optado por
+  desarrollar uno propio.  Actualmente se está comenzando a
+  implementar en las distintas áreas de la Secretaría de Vinculación.
 %
-\item[Adecuación de la sala de servidores:] Se debe agregar aire
-  acondicionado redundante, piso falso para la ubicación correcta del
-  cableado, control de acceso mediante llaves o dispositivo de clave y
-  evitar la existencia de elementos no propios de una sala de
-  servidores.
+\item[Adecuación de la sala de servidores:]
+  Actualmente la sala de servidores cuenta con un espacio ajustado.
+  %% TODO: mover lo que sigue al lugar correspondiente
+  %% Hay en existencia dentro de ésta 2 racks que contienen a los
+  %% servidores principales, los servidores de almacenamiento RAID y las
+  %% unidades de backup en cinta.
+  Se está contemplando la posibilidad de expansión, además es
+  necesario agregar un segundo aire acondicionado que funcione como
+  back-up, piso falso para lograr un cableado ordenado, control de
+  acceso mediante llaves o dispositivo de clave, y evitar la
+  existencia de elementos no propios de una sala de servidores.
 %
-\item[Proyecto ``/oficina'':] Se trata del desarrollo e implementación
-  de un proyecto tipo CMS (\eng{Content Management System}) para
-  brindar a las distintas oficinas del rectorado su propio espacio web
-  tanto en la intranet como en internet, mejorando la administración,
-  compartición y publicación de archivos y documentos.
-\item [Guía de trámites online para los usuarios:]Poner a disposición
-  de los usuarios los formularios para realizar trámites que se
-  manejan en la oficina de informática, por ejemplo: solicitud de
-  habilitación de nodo, creación de cuentas de correos, gestión de
-  alias.
+\item[Proyecto ``/oficina'':]
+  Se trata del desarrollo e implementación de un proyecto tipo CMS
+  (\eng{Content Management System}) para brindar a las distintas
+  oficinas del rectorado su propio espacio web tanto en la intranet
+  como en internet, mejorando la administración, compartición y
+  publicación de archivos y documentos.
+%
+\item [Guía de trámites online para los usuarios:]
+  Contempla el poner a disposición de los usuarios los formularios
+  para realizar los trámites que se manejan en la oficina de
+  informática, por ejemplo: solicitud de habilitación de nodo,
+  creación de cuentas de correos, gestión de alias.
 \end{description}
 
 Entre las estrategias a largo plazo podemos citar:
 %
 \begin{description}
-\item[Seguridad:]Evitar la utilización de software ilegal, encontrar y
+\item[Seguridad:]
+  Evitar la utilización de software ilegal, encontrar y
   erradicar virus y programas maliciosos, definición de procedimientos
   para protección de los datos, control de acceso a los recursos,
-  utilización de sistema de validación y encriptación para los
+  utilización de sistemas de validación y encriptado para los
   sistemas que manejan información sensible, securización de los
   servidores de correo mediante autenticación y encriptación,
   implementación de sistemas de detección de intrusos.
-\item[Puppets:]Es un sistema de control centralizado de la
-  configuración de los equipos, luego de una implementación fallida y
+%
+\item[Puppet:]
+  Se trata de implementar un sistema de control centralizado de la
+  configuración de los equipos. Luego de una implementación fallida y
   posterior caída en desuso, se pretende que el equipo de
   administración y soporte técnico se capacite con este sistema y lo
   ponga en funcionamiento para así gestionar la configuración de los
   equipos de manera centralizada y prácticamente automática,
-  resultando una simplificación del trabajo del personal.
+  resultando en una simplificación del trabajo del personal.
 \end{description}
 %
 \section{Hardware}
@@ -337,20 +348,27 @@ A su vez dentro de la DIPT encontramos la sala de servidores que cuenta con:
 \subsubsection*{Sistema operativo}
 Tanto en el Rectorado como en la DIPT, se utiliza principalmente el
 sistema operativo Debian GNU/Linux y en menor medida Microsoft Windows
-XP. En las notebooks personales de los usuarios también podemos
-encontrar Microsoft Windows Vista y Windows 7, así como Ubuntu y
-Kubuntu GNU/Linux.
+XP y 7. En las notebooks personales de los usuarios también podemos
+encontrar Microsoft Windows Vista, así como Ubuntu y Kubuntu
+GNU/Linux.
 %
 \subsubsection*{Antivirus}
-En la organización no existe un antivirus preestablecido, el más
-utilizado es el Avira Free Edition, que es el que instala el personal de
-soporte técnico en las máquinas de los usuarios. También encontramos
-el AVG Free Edition y el Nod 32, entre otros.
+El Centro de Telemática de la UNL (CETUL) ha adquirido licencias para
+la utilización del antivirus Sophos AV, sin embargo, éste es poco
+amigable y no muy robusto. El más utilizado es el Avira Antivir Free,
+que es el que instala el personal de soporte técnico en las máquinas
+de los usuarios. También encontramos el AVG Free Edition y el Nod 32,
+entre otros.
 %
 \subsubsection*{Base de datos}
 %
 Tanto en los sistemas desarrollados internamente como en los del SIU
-se utiliza PostgresSQL como motor de base de datos principal.
+se utiliza PostgresSQL como motor de base de datos principal. En
+algunos sistemas heredados se utiliza además MySQL y MS Fox.  Los
+servidores de base de datos son mantenidos por el área de
+Administración, mientras que las bases en sí son mantenidas por los
+desarrolladores de los distintos sistemas (áreas Desarrollo y
+Cómputos).
 %
 \subsection*{Software aplicativo}
 %
@@ -366,6 +384,7 @@ Se utiliza el sistema de versionado de código SVN, mantenido por los
 administradores en un respositorio centralizado en los servidores
 propios.
 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% aca quedo --mau
 \section{Esquema de telecomunicaciones}
 La topología de la red es bastante sencilla, el switch raíz está junto
 al router que conecta a la red externa y a la vez éste conecta a
