@@ -12,10 +12,10 @@
   {Trabajo Final, Etapa 1: Presentación de la Organización}}
 \newcommand{\autor}{Galarza, Romina \and Mastaglia, Nicolás \and Torrez, Mauro}
 \newcommand{\fecha}{\today}
-\newcommand{\tituloPDF}{Auditoría}
+\newcommand{\tituloPDF}{Auditoria Informatica: Etapa 1}
 \newcommand{\autorPDF}{Mauro Torrez}
-\newcommand{\asuntoPDF}{MNS GTP2}
-\newcommand{\clavesPDF}{MNS GTP2}
+\newcommand{\asuntoPDF}{}
+\newcommand{\clavesPDF}{}
 %
 % importar los archivos conf/config.tex y conf/comandos.tex
 \include{conf/config}
@@ -34,21 +34,20 @@
 %
 \section{Presentación de la organización}
 %
-La organización donde realizamos el trabajo es elRectorado de la Universidad
+Realizamos el trabajo de auditoría en el Rectorado de la Universidad
 Nacional del Litoral.
 
 El rectorado es el lugar físico en donde se encuentran situados las
 estructuras administrativas y gubernamentales de la Universidad
-Nacional del Litoral.
-Su actividad es básicamente administrativa y de gestión, y su estructura
-se compone de una serie de secretarías enfocadas a algún área en
-paticular.
+Nacional del Litoral.  Su actividad es básicamente administrativa y de
+gestión, y su estructura se compone de una serie de secretarías
+enfocadas a algún área en paticular.
 
 En la figura \ref{organi-rectorado} vemos un esquema básico de esta
 estructura.
 %
 \begin{figure}[H]
-  \center\includegraphics[width=127mm]{img/organi_rectorado}
+  \center\includegraphics[width=\textwidth]{img/organi_rectorado}
   \caption{Organigrama del Rectorado}
   \label{organi-rectorado}
 \end{figure}
@@ -74,16 +73,19 @@ La DIPT cuenta con unos 30 empleados, y se subdivide en los siguientes
   recibos de sueldo.
 %
 \item[Desarrollo]
-  Su función se basa en el desarrollo, mantenimiento y soporte técnico
-  de los sistemas contable SIU Pilagá, de gestión de alumnos SIU
-  Guaraní, entre otros.
+  Su función principal se basa en el desarrollo e implementación de
+  sistemas propios y la implementación de los sistemas desarrollados
+  por SIU, como el de gestión contable SIU Pilagá, el de gestión de
+  alumnos SIU Guaraní, etc. Además se encarga del mantenimiento y el
+  soporte técnico a los usuarios de estos sistemas.
 %
-\item[Administración]
+\item[Administración de Sistemas]
   Se ocupa de la implementación y del correcto funcionamiento de los
-  servidores (correo, web, sistemas, etc) y la compra de equipamiento
-  de red y servidores.
+  servidores (correo, web, sistemas, etc), la planificación de la
+  infraestructura de la red y la compra de equipamiento de red y
+  servidores.
 %
-\item[Seguridad]
+\item[Seguridad de Sistemas]
   Se encarga de la inspección y revisión de la seguridad de los
   sistemas y redes.
 %
@@ -108,48 +110,69 @@ Entre las estrategias a corto plazo podemos citar:
 %
 \begin{description}
 %
-\item[Estandarización de los equipos GNU/Linux:] Actualmente los
-  equipos con GNU/Linux presentan deficiencias en la configuración, lo
-  que las hace inmantenibles. Por lo tanto es necesario reinstalarlas
-  con una versión de Debian estable y una configuración
-  normalizada. Esta tarea se está llevando a cabo lentamente debido a
-  la falta de personal. La configuración normalizada se logra mediante
-  la utilización de scripts desarrollados por personal de soporte
-  técnico y disponible en un repositorio SVN, que se ejecutan luego de
-  la instalación del sistema estándar.
+\item[Estandarización de los equipos GNU/Linux:]
+  %% Actualmente los equipos con GNU/Linux presentan poca uniformidad en
+  %% la configuración, y falta de mantenimiento, lo que en la práctica
+  %% dificulta el soporte técnico a los usuarios y la administración
+  %% remota.  Por esto se hace necesario lo tanto es necesario
+  %% reinstalarlas con una versión de Debian estable y una configuración
+  %% normalizada.
+  El sistema operativo Debian ha publicado una nueva versión estable
+  del mismo. Esta actualización provocó que la gran mayoría de los
+  equipos con GNU/Linux quedaran en un estado intermedio entre la
+  versión anterior y la actual, volviéndolos inmantenibles. Se hace
+  necesario entonces llevar los equipos a la nueva versión estable.
+  La configuración normalizada se logra mediante la utilización de
+  scripts desarrollados por personal de soporte técnico y disponible
+  en un repositorio SVN, que se ejecutan luego de la instalación del
+  sistema estándar.  Esta tarea se está llevando a cabo lentamente
+  debido a la falta de personal.
 %
 \item[Actualización de los servidores a la nueva versión estable de
-  Debian:] Dado que se ha publicado una nueva versión del sistema
-  operativo GNU/Linux, se hace necesario actualizar el sistema en
-  estos y ajustar las configuraciones a las nuevas versiones de los
-  programas.
+  Debian:]
+  Al igual que ocurrie con las máquinas de los usuarios,
+  %% Dado que se ha publicado una nueva versión del sistema operativo
+  %% GNU/Linux,
+  se hace necesario actualizar el sistema en estos y ajustar las
+  configuraciones a las nuevas versiones de los programas.
 %
 \item[Migración y actualización del servidor de correo:]
-  Consiste en la instalación de un nuevo servidor, y el traspaso de
-  datos desde el servidor actual.
-\item[Sistema de padrinos:]Se trata de desarrollar el software de
-  facturación e impresión de recibos para el programa padrinos que
-  esta dentro de la Secretaría de Vinculación, dado que el sistema
-  actual se encuentra obsoleto y con problemas graves de
-  usabilidad. Esta estrategia se encuadra dentro de las de mediano
-  plazo de implementación del sistema Ilitia.
+  Consiste en la instalación de un nuevo servidor de correo
+  electrónico y su interfaz de webmail, realizando el traspaso de
+  datos desde el servidor actual al nuevo.
+%
+\item[Sistema de gestión para el Programa Padrinos:]
+  Se trata de desarrollar e implementar el software de facturación e
+  impresión de recibos para el Programa Padrinos UNL, perteneciente a
+  la Secretaría de Vinculación tecnológica y Desarrollo Productivo,
+  dado que el sistema actual se encuentra obsoleto y con problemas
+  graves de usabilidad. Esta estrategia se encuadra dentro de la
+  implementación del sistema Ilitia.
 %
 \end{description}
 
 Entre las estrategias a mediano plazo podemos citar:
 %
 \begin{description}
-\item[Migración a software libre:] Con el desarrollo de esta
-  estrategia se pretende que todos los equipos de la red, tanto
-  clientes como servidores, ejecuten prácticamente sólo software
-  libre, basado en GNU/Linux como sistema operativo base.
+\item[Migración a software libre:]
+  Con el desarrollo de esta estrategia se pretende que todos los
+  equipos de la red, tanto clientes como servidores, ejecuten sólo
+  software libre, basado en GNU/Linux como sistema operativo base.
+  Esta estrategia obedece a una resolución del Honorable Consejo
+  Superior, que establece la utilización exclusiva de software libre
+  en todo el Rectorado de la Universidad y sus dependencias.
 %
 \item[Capacitación a los usuarios:]
-Un punto fundamental, que requeriría atención inmediata luego de la
-migración sería la capacitación de los recursos humanos para enfrentar
-el cambio de sistema operativo y aplicaciones libres.
+  Al tiempo que se realiza la migración a entornos de software libre
+  se torna fundamental brindar capacitación a los usuarios en el uso
+  del nuevo sistema operativo y aplicaciones libres.
+  %% Un punto fundamental, que requeriría atención inmediata luego de la
+  %% migración sería la capacitación de los recursos humanos para
+  %% enfrentar el cambio de sistema operativo y aplicaciones libres.
 %
-\item[Sistema Ilitia:]Es un sistema para la gestión de los servicios a
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% aca quedé --mau
+\item[Sistema Ilitia:]
+  Es un sistema para la gestión de los servicios a
   terceros (SATs/SETs) y todo tipo de relaciones
   Universidad-Empresa. Este sistema es único en el sentido que no lo
   provee el consorcio SIU, sino que es un desarrollo propio. Actualmente
@@ -535,6 +558,6 @@ con los proveedores, lo que significa que no existe un control de
 éstas por parte del jefe de la dirección, y que cuando esta persona se
 ausenta se complican cosas tan corrientes como encargar la recarga de
 un tóner.
-\resatl{Agregar detalles de como se maneja con las compras}
+\resalt{Agregar detalles de como se maneja con las compras}
 
 \end{document}
