@@ -388,7 +388,7 @@ propios.
 \section{Esquema de telecomunicaciones}
 La topología de la red es bastante sencilla, el switch raíz está junto
 al router que conecta a la red externa y a la vez éste conecta a
-través de una fibra óptica a los servdores y los switches principales
+través de una fibra óptica a los servidores y los switches principales
 en los distintos pisos.
 
 En la figura \ref{topologia} vemos gráficamente estas conexiones.
@@ -468,30 +468,31 @@ día.
 %
 \section{Problemas, necesidades e incertidumbres existentes en la organización}
 %
-\subsection*{Falta de redundancia en enlaces troncales}
-Además del mismo edificio de Rectorado, la red interna abarca los
-edificios de la Secretaría de Extensión, ubicada en calle 9 de Julio y
-la oficina de la Direccion de Construcciones Universitarias.  La
-topología de la red no incluye redundancia ni siquiera en los enlaces
-troncales, ni en los que se dirigen a estos edificios externos. Estos
-enlaces de los que hablamos son de \resalt{ver tipo de fibra}fibra
-optica. Las demás conexiones tienen mayor importancia, debido a que
-sirven solo a un numero reducido de oficina. Tampoco existe ningún
-tipo de enlace inalámbrico que pudieran llegar a servir de backup.
+\subsection*{Redundancia de los enlaces de red}
+En ninguna parte de la topología de la red encontramos enlaces
+redundantes. Esto resulta en un riesgo alto de dejar fuera de servicio
+a sectores del Rectorado en caso de falla de una interface de red el
+los servidores como o una boca de un switch. También genera un riesgo
+en caso de corte de los cables de cobre y ópticos, especialmente los enlaces de fibra
+más extensos como los que sirven a la secretaría de
+Extensión y a la oficina de construcciones.
+
+A partir del traspaso de conexiones de cobre a fibra óptica, quedaron
+en desuso los cables de cobre sin embargo están en condiciones de ser reutlizados.
 %
 \subsection*{Sala de servidores}
 El espacio de la sala de servidores es el adecuado para la cantidad de
-equipos que hay actualmente, sin embargo si en un futuro se quisiera
-colocar algún equipo para mejorar las condiciones de la sala no sería
-posible. 
+equipos que hay actualmente, sin embargo, si en un futuro se quisiera
+agregar otro rack para ampliar la capacidad operativa, no sería
+posible dado que el espacio sería insuficiente.
 
-Un problema que presenta esta sala es que una falla en el
+Un problema que presenta la sala es que una falla en el
 acondicionador de aire podría traer problemas serios, especialmente en
 verano, dado que no existe un acondicionador de ``back-up'' en caso
 que falle el principal.
 %
 \subsection*{El espacio de trabajo del personal es reducido}
-El sector de informática en con el paso del tiempo a incrementado el
+El sector de informática con el paso del tiempo a incrementado el
 número de los puestos de trabajo. Pero el espacio de trabajo sigue
 siendo el mismo, por lo tanto el espacio físico no es suficiente. El
 mismo tiene 5[m] por 10[m] de dimensión y trabajan en este espacio 25 personas.
@@ -505,7 +506,7 @@ que ocurran fallas en los servidores luego de restablecido el
 suministro, porque el tiempo que brinda el UPS no alcanza para que los servidores 
 terminen de realizar sus tareas de apagado de forma óptima.
 %
-\subsection*{No existen control de acceso físico}
+\subsection*{No existe control de acceso físico}
 El acceso físico de las personas al lugar no está controlado, existiendo la
 posibilidad de que ingrese alguna persona malintencionada y ocurra por
 ejemplo robo de equipamiento. Esta posibilidad aumenta durante la
@@ -543,7 +544,7 @@ que lo hacen sin protegerlos con contraseña, lo que hace que
 cualquiera con acceso a la red pueda tomar el control de sus archivos.
 
 En definitiva, cualquier persona con conocimientos suficientes que
-consiga enchufar su PC en la red interna, tiene una capacidad
+consiga enchufar su PC a la red local, tiene una capacidad
 potencial de provocar daños a los sistemas, principalmente en las PCs
 de los usuarios.
 %
@@ -563,12 +564,13 @@ llevarlos adelante.
 
 \resalt{problema de actualizacion de Lenny a Sqeeze}
 
+\subsection*{ponerle título a esto}
 Así también ocurre que en la implementación de los sistemas, sean
 tanto desarrollos propios como aquellos provistos por el SIU, existe
 falta de previsibilidad en cuanto a su rendimiento para el hardware
 disponible. Además, a los usuarios de estos sistemas se les brinda
-escasa capacitación respecto del funcionamiento de los mismos, en
-especial de aquellos que brinda el consorcio SIU.
+escasa capacitación respecto del funcionamiento de los mismos.%, en
+%special de aquellos que brinda el consorcio SIU.
 %
 \subsection*{Relaciones comerciales}
 Por último, hemos detectado que en la parte administración existe una
