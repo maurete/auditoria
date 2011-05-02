@@ -108,7 +108,6 @@ La DIPT cuenta con unos 30 empleados, y se subdivide en los siguientes
   \label{organi-dipt}
 \end{figure}
 %
-\newpage
 \section{Estrategias informáticas a corto, mediano y largo plazo}
 %
 La planificacion de las estrategias infomáticas se da mayormente en la
@@ -394,18 +393,77 @@ propios.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% aca quedo --mau
 \section{Esquema de telecomunicaciones}
-La topología de la red es bastante sencilla, el switch raíz está junto
-al router que conecta a la red externa y a la vez éste conecta a
-través de una fibra óptica a los servidores y los switches principales
-en los distintos pisos.
 
-En la figura \ref{topologia} vemos gráficamente estas conexiones.
+En la sala de servidores encontramos 8 servidores rackeados en 2
+racks, y un tercer rack más pequeño que contiene los 2 switches
+raíz. También encontramos el firewall que es simplemente un PC clon
+con 4 interfaces de red Gigabit.
+
+La red está implementada mediante 4 redes virtuales (VLANs) manejadas por
+los switches raíz. Estas diferentes VLANs son:
+\begin{enumerate}
+\item Internet (red externa)
+\item Intranet (red interna)
+\item DMZ1 (zona demilitarizada 1)
+\item DMZ2 (zona demilitarizada 2)
+\end{enumerate}
+
+El firewall es el dispositivo encargado de regular los accesos entre
+las diferentes redes, permitiendo sólo aquellos accesos autorizados, y
+evitando la posibilidad de determinados ``ataques'' conocidos a las
+redes.
+
+La conexión a la red externa es provista por el Centro de Telemática
+de la UNL, físicamente se trata de un enlace de fibra óptica que llega
+a uno de los switches raíz y a través de éste conecta directamente al
+Firewall.
+
+La red interna es la red donde se ubican las estaciones de trabajo de
+los usuarios.  A uno de los switches raíz se conectan mediante fibra
+óptica 8 switches centrales que sirven a los niveles inferiores del
+rectorado, a saber: uno en el segundo piso, tres en el primer piso,
+dos en planta baja, uno en la Dirección de Construcciones (sobre calle
+San Gerónimo) y por último uno en la Secretaría de Extensión
+Universitaria, sobre calle 9 de julio. En el tercer piso encontramos 4
+switches conectados a este switch raíz: 3 en la DIPT y uno en la
+Dirección de Personal y Haberes.
+
+Al otro switch raíz se conectan los 8 servidores de la sala de
+servidores.  De estos servidores, los 8 están conectados a la
+intranet, 4 de ellos están conectados además a la DMZ1 y a la DMZ2, y
+2 están conectados a la DMZ1 únicamente.
+
+Estos 8 servidores en realidad implementan como máquinas virtuales
+diferentes los servicios como el correo electrónico, bases de datos,
+sistemas internos y esternos, etcétera.
+
+La razón de ser de las zonas demilitarizadas es que son partes de la
+red a la que sólo están conectados determinados servidores
+(virtuales), y para acceder a estos servicios es necesario atravesar
+el firewall, permitiendo así un mayor grado de seguridad y un mayor
+control acerca de qué accesos están autorizados y cuáles no. Por
+ejemplo, el servidor de correo electrónico es una máquina virtual que
+tiene una única interface de red, conectada a la DMZ1. Así,cuando un
+usuario desea acceder al servidor, deberá necesariamente atravesar el
+firewall para ello. Además, si se tratara de un usuario malicioso y
+éste lograra comprometer el servidor de correo, el hecho de que tiene
+que atravesar el firewall para alcanzar otros servidores y/o las
+máquinas de los usuarios limita su capacidad de potencial daño.
+
+Por último, encontramos que los 8 servidores poseen otra interface de
+red, que están conectadas a un switch aislado. Esta red es exclusiva
+para sincronización de datos entre los servidores. No está conectada a
+ninguna otra red y sirve sólo a las funcionalidades de los servidores.
+
+En la figura \ref{topologia} vemos gráficamente el esquema de la red
+de teleprocesamiento aquí descrita.
 %
 \begin{figure}
-  \center\includegraphics[height=89mm]{img/red}
+  \center\includegraphics[width=\textwidth]{img/red}
   \caption{Esquema de la topología de la red en el Rectorado.}
   \label{topologia}
 \end{figure}
+%
 \section{Normativa interna}
 %
 Existen determinadas normativas respecto del uso de la red, impuestas
@@ -426,7 +484,7 @@ siguiente:
 \item Prohibición de utilizar los servicios de la red para uso
   comercial particular,
 \item prohibición del uso de la red con fines de hackeo/cracking, y
-  difusión de virus/spyware/malware,
+  difusión de virus/spy\-ware/malware, y
 \item prohibición de la utilización de la cuenta de correo electrónico
   para envío de spam.
 \end{itemize*}
@@ -472,21 +530,43 @@ experiencia de trabajo previa, entre otros.
 El personal de la Dirección realiza ocasionalmente cursos de
 capacitación relacionados con la actividad en la que trabajan día a
 día.
-\resalt{completar aca!!!!! con datos concretos}
+
+Las áreas de Desarrollo y de Cómputos asisten a los encuentros
+realizadas por el SIU relacionados con la implementación de sus
+sistemas.
+
+El área de Administración de Sistemas realiza dos veces al año pruebas
+de stress en determinados sistemas, y también simulaciones con
+sistemas experimentales para el entrenamiento y ``sincronización de
+conocimientos'' entre sus miembros.
+
+Además, tanto las áreas de Desarrollo y de Administración de sistemas
+realizan encuentros semanales en donde se discuten los temas donde se
+hace necesaria una capacitación en profundidad de alguno de los
+integrantes.
+
+El área de seguridad realiza charlas al respecto, en general
+orientadas al área de Administración de Sistemas.
+
+En casos excepcionales determinadas personas asisten a cursos de
+capacitación/seminarios específicos dictados en general en Buenos
+Aires.
 %
 \section{Problemas, necesidades e incertidumbres existentes en la organización}
 %
 \subsection*{Redundancia de los enlaces de red}
 En ninguna parte de la topología de la red encontramos enlaces
 redundantes. Esto resulta en un riesgo alto de dejar fuera de servicio
-a sectores del Rectorado en caso de falla de una interface de red el
-los servidores como o una boca de un switch. También genera un riesgo
-en caso de corte de los cables de cobre y ópticos, especialmente los enlaces de fibra
-más extensos como los que sirven a la secretaría de
-Extensión y a la oficina de construcciones.
+a sectores del Rectorado en caso de falla de una interface de red en
+los servidores o en una boca de un switch central. También genera un
+riesgo en caso de corte de los cables de cobre y ópticos,
+especialmente los enlaces de fibra más extensos como los que sirven a
+la Secretaría de Extensión y a la Dirección de Construcciones
+Universitarias.
 
-A partir del traspaso de conexiones de cobre a fibra óptica, quedaron
-en desuso los cables de cobre sin embargo están en condiciones de ser reutlizados.
+Sin embargo, encontramos que existen cables de cobre UTP que han quedado instalados
+hacia varios de los switches centrales luego del traspaso a conexiones de fibra óptica,
+aunque éstos se encuentran desconectados y en desuso.
 %
 \subsection*{Sala de servidores}
 El espacio de la sala de servidores es el adecuado para la cantidad de
@@ -494,10 +574,11 @@ equipos que hay actualmente, sin embargo, si en un futuro se quisiera
 agregar otro rack para ampliar la capacidad operativa, no sería
 posible dado que el espacio sería insuficiente.
 
-Un problema que presenta la sala es que una falla en el
-acondicionador de aire podría traer problemas serios, especialmente en
-verano, dado que no existe un acondicionador de ``back-up'' en caso
-que falle el principal.
+Un problema que presenta la sala es que una falla en el acondicionador
+de aire podría traer problemas serios, dado que no existe un
+acondicionador de ``back-up'' en caso ue falle el principal. Este
+riesgo es particularmente alto en el verano, cuando el aire
+acondicionado funciona en toda su capacidad.
 %
 \subsection*{El espacio de trabajo del personal es reducido}
 El sector de informática con el paso del tiempo a incrementado el
@@ -521,6 +602,7 @@ ejemplo robo de equipamiento. Esta posibilidad aumenta durante la
 tarde, cuando hay pocas personas trabajando en el lugar.
 
 El área no posee cámaras de seguridad o algún bloqueo del tipo físico,
+como llaves o dispositivos de autorización por tarjeta/llave o similar,
 por lo tanto consideramos que existen falencias de seguridad.
 %
 \subsection*{Seguridad Lógica}
@@ -528,17 +610,24 @@ En todo el Rectorado la red a la que se conectan las estaciones de
 trabajo es cableada (Ethernet), no hay servicio de Wi-Fi provisto por
 la DIPT. Para el acceso a la red física, el usuario debe solicitar la
 habilitación de su PC en la red mediante el llenado de un
-formulario. Sin embargo, un sujeto malintencionado puede conectar
-directamente una PC y habilitar su funcionamiento en la red sin pedir
+formulario.
+
+Esta autorización resulta en el agregado de la PC a la lista de equipos autorizados, otorgándole una entrada
+en el servidor DNS y el DHCP. Este servidor DHCP es el encargado de asignarle una dirección IP a la máquina
+del usuario cuando éste la conecta a la intranet.
+
+Sin embargo, un sujeto malintencionado puede conectar directamente una
+PC y asignarle una dirección IP manualmente sin pedir
 autorización. Esto es posible dado que no existe ningún tipo de filtro
-respecto de quiénes se conectan a la red.
+de MAC o algún protocolo de autenticación mediante certificados o
+firmas digitales que controle quién accede a la red.
 
 La DIPT provee un servidor de directorio \eng{LDAP} que se utiliza
 para autenticar las cuentas de los usuarios al iniciar sesión. Este
-mecanismo de autenticación se realiza en muchos casos en forma no
-encriptada, lo que implica que alguien con conocimientos básicos de
-técnicas conocidas como ``sniffing'' puede capturar las claves de los
-usuarios.
+mecanismo de autenticación se realiza en muchos casos (sino en la
+mayoría) en forma no encriptada, lo que implica que alguien con
+conocimientos básicos de técnicas conocidas como ``sniffing'' puede
+capturar las claves de los usuarios.
 
 El servicio de correo electrónico que se ofrece utiliza un servidor de
 salida SMTP no autenticado, con la única restricción de que el equipo
