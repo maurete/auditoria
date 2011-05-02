@@ -51,10 +51,12 @@ En la figura \ref{organi-rectorado} vemos un esquema básico de la estructura.
   \label{organi-rectorado}
 \end{figure}
 
-Como se puede observar en la figura \ref{mapa-ubicación}, el rectorado está ubicado en la calle Bv. Pellegrini entre las calles 9 de Julio y San Jerónimo, en la ciudad de Santa Fe.
+Como se puede observar en la figura \ref{mapa-ubicación}, el rectorado
+está ubicado en la calle Bv. Pellegrini entre las calles 9 de Julio y
+San Jerónimo, en la ciudad de Santa Fe.
 
 \begin{figure}
-  \center\includegraphics[height=7cm]{img/mapa.png}
+  \center\includegraphics[width=\textwidth]{img/ubicacion_rect}
   \caption{Ubicación del Rectorado en la ciudad de Santa Fe}
   \label{mapa-ubicación}
 \end{figure}
@@ -67,7 +69,6 @@ y Planificación Tenológica, la cual se encarga de llevar a cabo las
 tareas de desarrollo, mantenimiento y administracion de recursos
 informáticos, servidores, aplicaciones y soporte técnico a los
 usuarios finales dentro del rectorado.
-
 Jerárquicamente, esta dirección depende de la Secretaría General.
 %
 \subsection{Estructura}
@@ -124,16 +125,20 @@ Entre las estrategias a corto plazo podemos citar:
   %% remota.  Por esto se hace necesario lo tanto es necesario
   %% reinstalarlas con una versión de Debian estable y una configuración
   %% normalizada.
-  El sistema operativo Debian ha publicado una nueva versión estable
-  del mismo. Esta actualización provocó que la gran mayoría de los
-  equipos con GNU/Linux quedaran en un estado intermedio entre la
-  versión anterior y la actual, volviéndolos inmantenibles. Se hace
-  necesario entonces llevar los equipos a la nueva versión estable.
-  La configuración normalizada se logra mediante la utilización de
-  scripts desarrollados por personal de soporte técnico y disponible
-  en un repositorio SVN, que se ejecutan luego de la instalación del
-  sistema estándar.  Esta tarea se está llevando a cabo lentamente
-  debido a la falta de personal.
+  Se pretende normalizar las configuraciones y versiones de los
+  sistemas en las máquinas con GNU/Linux, ya que éstas presentan
+  sistemas en diferentes versiones y estados de configuración, lo que
+  dificulta el mantenimiento de estos sistemas.
+  %% El sistema operativo Debian ha publicado una nueva versión estable
+  %% del mismo. Esta actualización provocó que la gran mayoría de los
+  %% equipos con GNU/Linux quedaran en un estado intermedio entre la
+  %% versión anterior y la actual, volviéndolos inmantenibles. Se hace
+  %% necesario entonces llevar los equipos a la nueva versión estable.
+  %% La configuración normalizada se logra mediante la utilización de
+  %% scripts desarrollados por personal de soporte técnico y disponible
+  %% en un repositorio SVN, que se ejecutan luego de la instalación del
+  %% sistema estándar.  Esta tarea se está llevando a cabo lentamente
+  %% debido a la falta de personal.
 %
 \item[Actualización de los servidores a la nueva versión estable de
   Debian:]
@@ -234,120 +239,81 @@ Entre las estrategias a largo plazo podemos citar:
   resultando en una simplificación del trabajo del personal.
 \end{description}
 %
-\section{Hardware}
+\newpage\section{Hardware}
 %
 El inventario del hardware de Rectorado es llevado por la
 Dirección de Patrimonio, externa a la DIPT.
 
 A continuación, se presenta un resumen del hardware disponible en la
-DIPT y algunos sectores del rectorado a modo de ejemplificación.
+DIPT, y el resto de los pisos 3 y 2 del rectorado a modo de ejemplificación.
 %
-\subsection*{Piso 3}
+\begin{description}
+  \item[Piso 3]: En este piso encontramos la DIPT y la oficina de Personal y Haberes.
+  %
+    \begin{description}
+      \item[DIPT]:
+      %
+      \begin{itemize*}
+      \item 27 workstations
+      \item 2 notebooks
+      \item 2 impresoras
+      \item 1 multifunción
+      \item 5 teléfonos
+      \item 5 aires acondicionados
+      \item 1 cañón
+      \item 3 switches
+      \end{itemize*}
+      %
+      A su vez dentro de la DIPT encontramos la sala de servidores que cuenta con:
+      \begin{itemize*}
+      \item 8 servidores generales
+      \item 2 servidores de almacenamiento RAID
+      \item 1 PC clon (Firewall)
+      \item 2 switches raíz
+      \item 1 aire acondicionado
+      \item 2 racks con servidores
+      \item 2 UPS, uno en cada rack
+      \end{itemize*}
+      %
+      \item[Personal y Haberes]:
+      \begin{itemize*}
+      \item 20 workstations
+      \item 6 impresoras
+      \item 1 multifución
+      \item 9 teléfonos
+      \item 2 aires acondicionados
+      \item 2 switches
+      \end{itemize*}
+    \end{description}
+    %
+  \item[Piso 2]: En este piso se encuentra la Dirección General de Administración,
+    y la oficina de Despacho General y Consejo Superior.
+  %
+    \begin{description}
+      \item[DGA]:
+      \begin{itemize*}
+      \item 26 workstations
+      \item 18 impresoras
+      \item 1 multifunción
+      \item 16 teléfonos
+      \item 3 aires acondicionados
+      \item 3 switches
+      \item 2 fax
+      \item 1 fotocopiadora
+      \end{itemize*}
+      \newpage
+      \item[Despacho General, Consejo Superior]:
+      \begin{itemize*}
+      \item 10 workstations
+      \item 4 impresoras
+      \item 4 teléfonos
+      \item 1 aire acondicionado
+      \item 1 switch
+      \item 1 fax
+      \end{itemize*}
+    \end{description}
+\end{description}
 %
-En este piso encontramos la DIPT y la oficina de Personal.
-%
-\newpage
-\subsubsection*{DIPT}
-%
-\begin{itemize*}
-\item 27 workstations
-\item 2 notebooks
-\item 2 impresoras
-\item 1 multifución
-\item 5 teléfonos
-\item 5 aires acondicionados
-\item 1 cañón
-\end{itemize*}
-%
-A su vez dentro de la DIPT encontramos la sala de servidores que cuenta con:
-\begin{itemize*}
-\item 6 servidores generales
-\item 2 servidores de almacenamiento RAID
-\item 1 router raíz
-\item 2 switches raiz
-\item 1 aire acondicionado
-\item 2 racks con servidores
-\item 1 UPS por rack
-\end{itemize*}
-%
-\subsubsection*{Personal}
-\begin{itemize*}
-\item 20 workstations
-\item 6 impresoras
-\item 1 multifución
-\item 9 teléfonos
-\item 2 aires acondicionados
-\end{itemize*}
-%
-\subsection*{Piso 2}
-%
-\subsubsection*{DGA}
-\begin{itemize*}
-\item 26 workstations
-\item 16 impresoras
-\item 1 multifución
-\item 16 teléfonos
-\item 3 aires acondicionados
-\item 3 switches
-\item 2 fax
-\end{itemize*}
-%
-\subsubsection*{Despacho General, Consejo Superior}
-\begin{itemize*}
-\item 10 workstations
-\item 4 impresoras
-\item 4 teléfonos
-\item 1 aire acondicionado
-\item 1 switch
-\item 1 fax
-\end{itemize*}
-%
-%% \subsection*{Piso 1}
-%% %
-%% \subsubsection*{Ala este}
-%% \begin{itemize*}
-%% \item 26 workstations
-%% \item 16 impresoras
-%% \item 1 multifución
-%% \item 16 teléfonos
-%% \item 3 aires acondicionados
-%% \item 3 switches
-%% \item 2 fax
-%% \end{itemize*}
-%% %
-%% \subsubsection*{Ala oeste}
-%% \begin{itemize*}
-%% \item 10 workstations
-%% \item 4 impresoras
-%% \item 4 teléfonos
-%% \item 1 aire acondicionado
-%% \item 1 switch
-%% \item 1 fax
-%% \end{itemize*}
-%% %
-%% \subsection*{Planta baja}
-%% %
-%% \subsubsection*{Ala este}
-%% \begin{itemize*}
-%% \item 26 workstations
-%% \item 16 impresoras
-%% \item 1 multifución
-%% \item 16 teléfonos
-%% \item 3 aires acondicionados
-%% \item 3 switches
-%% \item 2 fax
-%% \end{itemize*}
-%% %
-%% \subsubsection*{Ala oeste}
-%% \begin{itemize*}
-%% \item 10 workstations
-%% \item 4 impresoras
-%% \item 4 teléfonos
-%% \item 1 aire acondicionado
-%% \item 1 switch
-%% \item 1 fax
-%% \end{itemize*}
-%% %
 \section{Software}
 %
 \subsection{Software base}
@@ -391,7 +357,6 @@ Se utiliza el sistema de versionado de código SVN, mantenido por los
 administradores en un respositorio centralizado en los servidores
 propios.
 %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% aca quedo --mau
 \section{Esquema de telecomunicaciones}
 
 En la sala de servidores encontramos 8 servidores rackeados en 2
@@ -458,12 +423,13 @@ ninguna otra red y sirve sólo a las funcionalidades de los servidores.
 En la figura \ref{topologia} vemos gráficamente el esquema de la red
 de teleprocesamiento aquí descrita.
 %
-\begin{figure}
+\begin{figure}[h]
   \center\includegraphics[width=\textwidth]{img/red}
   \caption{Esquema de la topología de la red en el Rectorado.}
   \label{topologia}
 \end{figure}
 %
+\newpage
 \section{Normativa interna}
 %
 Existen determinadas normativas respecto del uso de la red, impuestas
@@ -515,11 +481,24 @@ siguiente:
   del mismo.
 \end{description}
 %
+\newpage
 \section{Relaciones con terceros}
-Las relaciones con terceros que se manejan dentro de la DIPT son
-aquellas con los proveedores de hardware e insumos, y con las empresas
-que brindan soporte técnico a los equipos en casos que no puedan ser
-resueltos internamente.
+La DIPT provee servicios de administración, mantenimiento y soporte
+técnico de sistemas a diversas áreas de la Universidad.
+
+Además de esto, en la Dirección se manejan relaciones principalmente
+con proveedores de hardware, insumos y servicios informáticos.
+
+Las compras de equipamiento se realizan según la normativa establecida
+por el Rectorado.  Ésta establece que las compras menores a \$2400 se
+pueden efectuar directamente, mientras que para aquellas que superan
+este monto es necesario pedir tres presupuestos a diferentes empresas.
+Una vez obtenidos estos presupuestos se debe iniciar un expediente a
+través de Mesa de Entrada, en el cualse deben incluir éstos junto a un
+cuadro comparativo donde se justifique la adjudicación de la
+compra. Además, si la compra supera los \$10000, se deberá llamar a
+licitación con una solicitud a la Dirección de Compras y
+Contrataciones.
 %
 \section{Politicas de selección, capacitación y entrenamiento de personal}
 %
@@ -552,6 +531,7 @@ En casos excepcionales determinadas personas asisten a cursos de
 capacitación/seminarios específicos dictados en general en Buenos
 Aires.
 %
+\newpage
 \section{Problemas, necesidades e incertidumbres existentes en la organización}
 %
 \subsection*{Redundancia de los enlaces de red}
@@ -564,9 +544,10 @@ especialmente los enlaces de fibra más extensos como los que sirven a
 la Secretaría de Extensión y a la Dirección de Construcciones
 Universitarias.
 
-Sin embargo, encontramos que existen cables de cobre UTP que han quedado instalados
-hacia varios de los switches centrales luego del traspaso a conexiones de fibra óptica,
-aunque éstos se encuentran desconectados y en desuso.
+Sin embargo, encontramos que existen cables de cobre UTP que han
+quedado instalados hacia varios de los switches centrales luego del
+traspaso a conexiones de fibra óptica, aunque éstos se encuentran
+desconectados y en desuso.
 %
 \subsection*{Sala de servidores}
 El espacio de la sala de servidores es el adecuado para la cantidad de
@@ -584,7 +565,8 @@ acondicionado funciona en toda su capacidad.
 El sector de informática con el paso del tiempo a incrementado el
 número de los puestos de trabajo. Pero el espacio de trabajo sigue
 siendo el mismo, por lo tanto el espacio físico no es suficiente. El
-mismo tiene 5[m] por 10[m] de dimensión y trabajan en este espacio 25 personas.
+mismo tiene 5[m] por 10[m] de dimensión y trabajan en este espacio 25
+personas.
 %
 \subsection*{No existe un plan de contingencia ante fallas eléctricas}
 Actualmente no existe un plan de contingencia ante eventuales fallas
@@ -592,29 +574,30 @@ en el suministro eléctrico. La oficina cuenta con un UPS centralizado
 que permite mantener el suministro eléctrico en las PCs de los
 usuarios y los servidores durante unos 10 minutos. Es bastante común
 que ocurran fallas en los servidores luego de restablecido el
-suministro, porque el tiempo que brinda el UPS no alcanza para que los servidores 
-terminen de realizar sus tareas de apagado de forma óptima.
+suministro, porque el tiempo que brinda el UPS no alcanza para que los
+servidores terminen de realizar sus tareas de apagado de forma óptima.
 %
 \subsection*{No existe control de acceso físico}
-El acceso físico de las personas al lugar no está controlado, existiendo la
-posibilidad de que ingrese alguna persona malintencionada y ocurra por
-ejemplo robo de equipamiento. Esta posibilidad aumenta durante la
-tarde, cuando hay pocas personas trabajando en el lugar.
+El acceso físico de las personas al lugar no está controlado,
+existiendo la posibilidad de que ingrese alguna persona
+malintencionada y ocurra por ejemplo robo de equipamiento. Esta
+posibilidad aumenta durante la tarde, cuando hay pocas personas
+trabajando en el lugar.
 
 El área no posee cámaras de seguridad o algún bloqueo del tipo físico,
-como llaves o dispositivos de autorización por tarjeta/llave o similar,
-por lo tanto consideramos que existen falencias de seguridad.
+como llaves o dispositivos de autorización por tarjeta/llave o
+similar, por lo tanto consideramos que existen falencias de seguridad.
 %
 \subsection*{Seguridad Lógica}
 En todo el Rectorado la red a la que se conectan las estaciones de
 trabajo es cableada (Ethernet), no hay servicio de Wi-Fi provisto por
 la DIPT. Para el acceso a la red física, el usuario debe solicitar la
-habilitación de su PC en la red mediante el llenado de un
-formulario.
+habilitación de su PC en la red mediante el llenado de un formulario.
 
-Esta autorización resulta en el agregado de la PC a la lista de equipos autorizados, otorgándole una entrada
-en el servidor DNS y el DHCP. Este servidor DHCP es el encargado de asignarle una dirección IP a la máquina
-del usuario cuando éste la conecta a la intranet.
+Esta autorización resulta en el agregado de la PC a la lista de
+equipos autorizados, otorgándole una entrada en el servidor DNS y el
+DHCP. Este servidor DHCP es el encargado de asignarle una dirección IP
+a la máquina del usuario cuando éste la conecta a la intranet.
 
 Sin embargo, un sujeto malintencionado puede conectar directamente una
 PC y asignarle una dirección IP manualmente sin pedir
@@ -657,17 +640,58 @@ de estas áreas nos indican que se debe a la saturación de trabajo
 la planificación, investigación y capacitación necesaria para
 llevarlos adelante.
 
-\resalt{dar mas detalle de los proyectos abortados}
+Varios de los proyectos que forman parte de las estrategias antes
+citadas se encuentran en estado de virtual congelamiento, o de
+funcionamiento a medias.  Entre ellos encontramos:
+\begin{description}
+\item[Proyecto Puppet]: este proyecto se inició a finales del año
+  2008. Como parte del mismo participaban las áreas de administración
+  de sistemas y de soporte técnico.  Se avanzó en el proyecto durante
+  el año siguiente según estaba previsto, pero luego a partir de la
+  reducción del personal de soporte técnico y la renovación casi
+  simultánea del plantel de administración, el proyecto en su conjunto
+  ha quedado estancado.
+\item[Servidor de correo]: la actualización del servidor de correo
+  también se encuentra congelada dado que el proyecto requiere que el
+  personal de soporte técnico actualice la configuración de cada una
+  de las máquinas de los usuarios. Como el correo electrónico es
+  un servicio esencial para el trabajo del personal, esta
+  actualización debe realizarse en un tiempo corto, lo cual resulta
+  imposible dados los recursos disponibles hoy día.
+\item[Capacitación a los usuarios]: estas tareas de capacitación se
+  habían planificado como un trabajo extra del personal, coordinado
+  por la Secretaría de Coordinación del Rectorado.  Dada la escasez de
+  asignación de recursos a las mismas, hoy en día no se están
+  llevando adelante.
+\item[Proyecto /oficina]: si bien no podemos considerar a este
+  proyecto como abandonado, sólo se avanzó en una primera etapa de
+  implementación del mismo, y actualmente éste sirve a unas 3
+  oficinas. En este caso podemos considerar la falta de coordinación
+  entre las áreas de seguridad y administración de sistemas como el
+  origen del problema.
+\end{description}
+%
+\subsection*{Falta de mantenimiento en las PCs de los usuarios}
+Este es un problema que se ha puesto en evidencia a partir de la
+publicación de la nueva versión estable del sistema operativo Debian
+GNU/Linux, usado en la mayoría de las estaciones de trabajo en febrero
+de este año.
 
-\resalt{problema de actualizacion de Lenny a Sqeeze}
+Una falta de mantenimiento de la configuración por parte del equipo de
+soporte técnico y de administración provocó que sin haberlo previsto,
+los equipos de los usuarios se actualizaran automáticamente, fallando
+en medio del proceso, lo que los volvió inusables por parte de los
+usuarios.
 
-\subsection*{ponerle título a esto}
-Así también ocurre que en la implementación de los sistemas, sean
-tanto desarrollos propios como aquellos provistos por el SIU, existe
-falta de previsibilidad en cuanto a su rendimiento para el hardware
-disponible. Además, a los usuarios de estos sistemas se les brinda
-escasa capacitación respecto del funcionamiento de los mismos.%, en
-%special de aquellos que brinda el consorcio SIU.
+Entre las causas encontramos además el abandono del proyecto Puppet
+iniciado dos años atrás.
+%
+%% \subsection*{}
+%% Así también ocurre que en la implementación de los sistemas, sean
+%% tanto desarrollos propios como aquellos provistos por el SIU, existe
+%% falta de previsibilidad en cuanto a su rendimiento para el hardware
+%% disponible. Además, a los usuarios de estos sistemas se les brinda
+%% escasa capacitación respecto del funcionamiento de los mismos.
 %
 \subsection*{Relaciones comerciales}
 Por último, hemos detectado que en la parte administración existe una
@@ -676,6 +700,4 @@ con los proveedores, lo que significa que no existe un control de
 éstas por parte del jefe de la dirección, y que cuando esta persona se
 ausenta se complican cosas tan corrientes como encargar la recarga de
 un tóner.
-\resalt{Agregar detalles de como se maneja con las compras}
-
 \end{document}
