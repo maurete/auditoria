@@ -700,4 +700,38 @@ con los proveedores, lo que significa que no existe un control de
 éstas por parte del jefe de la dirección, y que cuando esta persona se
 ausenta se complican cosas tan corrientes como encargar la recarga de
 un tóner.
+\newpage
+\section{Plan de Mejoras}
+\subsection*{Redundancia de los enlaces de red}
+Verificar el estado de los cables de cobre que mencionamos en este punto, en caso de que esten bien volver a conectarlos, si no utilizar cables nuevos y sino conecciones inalambricas.
+De cualquier modo, los enlaces que se usan de backup tienen menor rendimiento que los enlaces de fibra, por lo tanto se notará cuando haya un cambio. Una opcion tambien posible seria colocar redundancia con fibra optica, pero es mas cara.
+Redundancia a los enlaces dentro de la sala de servidores, la ventaja es el aumento de la velocidad.
+\subsection*{Sala de servidores}
+Plantear una reforma edilicia, que involucra otra gente.O mudar gente a otra oficina. O mudar la sala de servidores a un espacio adecuado.
+
+Para resolver el otro problema, se podria comprar otro aire acondicionado.
+\subsection*{El espacio de trabajo del personal es reducido}
+Dado que la oficina DIPT cuenta con tres areas: administracion y desarrollo, soporte técnico y computos, se podría replantear la ubicación de los recursos humanos de cada area. Dado que el personal de administración y desarrollo son mas, proponemos reubicar a los empleados de soporte técnico y de computos hacia otras oficinas y así distrbuir de mejor manera en la oficina actual. Ademas ganaríamos espacio para redimensionar la sala de servidores.
+\subsection*{No existen un plan de contingencia ante fallas eléctricas}
+Ya se adquirio el grupo electrógeno pero hay que conectarlo. El equipo llego a nuestras oficinas hace unos meses y todavía no fueron capaces de conectarlo. Podes creerlo?
+\subsection*{No existe control de acceso físico}
+Para el espacio de trabajo, se podria pensar en colocar camaras de seguridad. Pero para controlar el acceso a la sala de servidores, es conveniente tener mayor seguridad. Esto se lograría colocando llave o un control de acceso mediante un sistema de detección de huellas digitales.
+\subsection*{Seguridad lógica}
+Colocar un servidor de autenticación para las computadoras que se conectan a la red física.(Investigar)
+
+Utilizar LDAP a través de HTTPS. Ver que onda Kerberos.
+
+Implementar un filtro que limite la cantidad de correos que un usuario puede enviar, para esto hay que agregar autenticacion al servidor SMTP.
+
+Datos criticos.
+
+implementar un sistema con compartición de archivos, que evite que los usuarios compartar sus archivos.
+
+\subsection*{Proyectos abortados}
+\subsection*{Falta de mantenimiento en las PCs de los usuarios}
+\subsection*{Relaciones comerciales}
+
+
+
 \end{document}
+
