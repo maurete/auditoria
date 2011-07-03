@@ -703,62 +703,150 @@ un tóner.
 \newpage
 \section{Plan de Mejoras}
 \subsection*{Redundancia de los enlaces de red}
-Recomendamos agregar enlaces redundantes a la red de área local, al menos en enlaces principales. A este efecto se deberá considerar la posibilidad de utilizar los enlaces de cobre preexistentes a la fibra, para lo cual habrá que verificar el estado de estos cables. En caso de que no estén en condiciones, habrá que evaluar si conviene reemplazarlos por cables nuevos o configurar enlaces inalámbricos. Sería conveniente analizar la posibilidad de colocar enlaces de fibra que permitirán soportar eventuales amplicaciones de la capacidad de la red.
+Recomendamos agregar enlaces redundantes a la red de área local, al
+menos en enlaces principales. A este efecto se deberá considerar la
+posibilidad de utilizar los enlaces de cobre preexistentes a la fibra,
+para lo cual habrá que verificar el estado de estos cables. En caso de
+que no estén en condiciones, habrá que evaluar si conviene
+reemplazarlos por cables nuevos o configurar enlaces
+inalámbricos. Sería conveniente analizar la posibilidad de colocar
+enlaces de fibra que permitirán soportar eventuales amplicaciones de
+la capacidad de la red.
 
-También es de vital importancia dotar de redundancia a los enlaces y switches de la sala de servidores, esto además traerá la ventaja del aumento de velocidad de los mismos.
+También es de vital importancia dotar de redundancia a los enlaces y
+switches de la sala de servidores, esto además traerá la ventaja del
+aumento de velocidad de los mismos.
 %
 \subsection*{Sala de servidores}
-Se deberá considerar la expansión de la sala de servidores. Para esto se deberán evaluar tres posiblidades, una de ellas es reubicar el área de soporte técnico en otra oficina dentro del mismo rectorado y así ocupar el espacio que ocupa actualmente para la ampliación de la sala.
- Otra posibilidad es realizar una reforma edilicia que involucre reubicar los puestos de trabajo y la sala de servidores dentro del mismo espacio físico, logrando así un mejor aprovechamiento del lugar. 
-Como úlima opcion proponemos la posibilidad de mudar la sala de servidores a otro sector del rectorado o incluso a otro edificio, como puede ser la Secretaría de Extensión Universitaria.   
+Se deberá considerar la expansión de la sala de servidores. Para esto
+se deberán evaluar tres posiblidades, una de ellas es reubicar el área
+de soporte técnico en otra oficina dentro del mismo rectorado y así
+ocupar el espacio que ocupa actualmente para la ampliación de la sala.
+Otra posibilidad es realizar una reforma edilicia que involucre
+reubicar los puestos de trabajo y la sala de servidores dentro del
+mismo espacio físico, logrando así un mejor aprovechamiento del lugar.
+Como úlima opcion proponemos la posibilidad de mudar la sala de
+servidores a otro sector del rectorado o incluso a otro edificio, como
+puede ser la Secretaría de Extensión Universitaria.
 
-También se hace imperativo instalar otro equpo de aire acondicionado, para salvaguarda del existente en caso de alguna falla.
+También se hace imperativo instalar otro equpo de aire acondicionado,
+para salvaguarda del existente en caso de alguna falla.
 %
 \subsection*{El espacio de trabajo del personal es reducido}
-Dado que la oficina DIPT cuenta con tres áreas: administracion y desarrollo, soporte técnico y cómputos, se podría replantear la ubicación de los recursos humanos de cada área. Dado que el personal de administración y desarrollo es mas numeroso, proponemos reubicar a los empleados de soporte técnico y de cómputos hacia otras oficinas y así mejorar el espacio de trabajo en la oficina actual.
+Dado que la oficina DIPT cuenta con tres áreas: administracion y
+desarrollo, soporte técnico y cómputos, se podría replantear la
+ubicación de los recursos humanos de cada área. Dado que el personal
+de administración y desarrollo es mas numeroso, proponemos reubicar a
+los empleados de soporte técnico y de cómputos hacia otras oficinas y
+así mejorar el espacio de trabajo en la oficina actual.
 %
 \subsection*{No existen un plan de contingencia ante fallas eléctricas}
-Se deberá elaborar un plan de contingencia, así como terminar de colocar el grupo electrógeno adquirido recientemente.
-También sería conveniente modificar la instalación eléctrica de la oficina, separando los tomas para el qeuipamiento informático de aquellos de uso general. 
+Se deberá elaborar un plan de contingencia, así como terminar de
+colocar el grupo electrógeno adquirido recientemente.  También sería
+conveniente modificar la instalación eléctrica de la oficina,
+separando los tomas para el qeuipamiento informático de aquellos de
+uso general.
 %
 \subsection*{No existe control de acceso físico}
-Es conveniente colocar cámaras de seguridad para monitorear el espacio de trabajo de la oficina. Pero para controlar el acceso a la sala de servidores, es conveniente tener mayor seguridad. Esto se lograría colocando llave o un control de acceso mediante un sistema de detección de huellas digitales.
+Es conveniente colocar cámaras de seguridad para monitorear el espacio
+de trabajo de la oficina. Pero para controlar el acceso a la sala de
+servidores, es conveniente tener mayor seguridad. Esto se lograría
+colocando llave o un control de acceso mediante un sistema de
+detección de huellas digitales.
 %
 \subsection*{Seguridad lógica}
-Colocar un servidor de autenticación para las computadoras que se conectan a la red física.(Investigar)
+Se deberá investigar la factibilidad de incorporar tecnología de
+autenticación mediante un servidor RADIUS a la red de área local.
+Esta no será una tarea menor, ya que se hace necesario configurar todos
+los equipos de la red, desde servidores hasta las impresoras en red, incluyendo
+las PCs de los puestos de trabajo y los switches en la red de área local.
 
-Utilizar LDAP a través de HTTPS. Ver que onda Kerberos.
+Lo más conveniente sería entonces diseñar un plan de implementación
+gradual, como puede ser el siguiente:
+\begin{enumerate}
+\item Comenzar por incorporar esta tecnología de autenticación a
+  aquellos servicios que manejan información crítica, y aquellos
+  puestos que trabajan con estos sistemas.
+\item Seguir por los sistemas y puestos de trabajo que manejan
+  información confidencial pero no crítica.
+\item Finalmente, incorporar al resto de los usuarios y el
+  equipamiento como impresoras de red, lo cual traería consigo el
+  beneficio de que todos los usuarios podrán estar seguros que el
+  entorno de red al que se conectan es fiable y controlado.
+\end{enumerate}
 
-Implementar un filtro que limite la cantidad de correos que un usuario puede enviar, para esto hay que agregar autenticacion al servidor SMTP.
+En lo que refiere al servidor LDAP, es imperativo volver a configurar
+la utilización del servicio a través de HTTP seguro (HTTPS) para
+evitar que las contraseñas de los usuarios estén viajando en texto
+plano a través de la red.
 
-Datos criticos.
+En lo que refiere al servidor de correo electrónico, se hace necesario
+\begin{itemize*}
+\item Incorporar autenticación al servidor de salida SMTP, y
+  establecer una cuota máxima de correos permitidos por usuario por
+  unidad de tiempo (por ejemplo, que un mismo usuario no pueda enviar
+  correo a más de 100 personas en un lapso de una hora).
+\item Inhabilitar las conexiones no seguras (sin seguridad TLS) tanto
+  para el sevidor de salida SMTP, como para los servidores de
+  recepción POP e IMAP.
+\item Incorporar al cliente de webmail un desafío estilo CAPTCHA, que
+  verifique la ``humanidad'' del usuario antes de permitir el envío de
+  correo.
+\end{itemize*}
 
-implementar un sistema con compartición de archivos, que evite que los usuarios compartar sus archivos.
+Se hace muy conveniente implementar un sistema centralizado de manejo
+de documentos, que permita a los usuarios almacenar sus documentos y
+compartirlos con otros usuarios. Este sistema debería proveer además
+un servicio de backup, e idealmente, un sistema de control de
+versiones.
+
+Una vez puesto en funcionamiento el sistema se deberán realizar
+capacitaciones a los puestos de trabajo, persuadiéndolos de las
+ventajas de utilizar este sistema en lugar de utilizar el servicio
+(inseguro) de carpetas compartidas de Windows.
 
 \subsection*{Proyectos abortados}
-Usar un sistema de seguimiento de proyetcos y una persona encargada de dar aviso a los encargados de proyetcos que hay que terminarlo.
-proponemos  implementar un sistema para seguimiento de proyectos, que tendria las siguientes caracteristicas:
-un plan de tareas de cada proyecto con fechas estimadas de cada tarea a realizar.
-alarmas que den aviso de incumplimiento de tareas
+Usar un sistema de seguimiento de proyectos y una persona encargada de
+dar aviso a los encargados de proyetcos que hay que terminarlo.
+proponemos implementar un sistema para seguimiento de proyectos, que
+tendria las siguientes caracteristicas: un plan de tareas de cada
+proyecto con fechas estimadas de cada tarea a realizar.  alarmas que
+den aviso de incumplimiento de tareas
 
-Desarrollar un manual de procedmiento para llevar a cabo un proyecto nuevo.
+Desarrollar un manual de procedmiento para llevar a cabo un proyecto
+nuevo.
 
-Para el área de administración y soporte tenico en cada área aumentar el presupuesto para agregar mas gente que se ocupe de las cuestiones del día a día. De esta forma quedarían liberadas personas para encargarse de planificar, investigar.
+Para el área de administración y soporte tenico en cada área aumentar
+el presupuesto para agregar mas gente que se ocupe de las cuestiones
+del día a día. De esta forma quedarían liberadas personas para
+encargarse de planificar, investigar.
 
-Volver a hacer un análisis de los proyectos virtualmente congelados para dicidir si se reinician o conviene descartarlo.
+Volver a hacer un análisis de los proyectos virtualmente congelados
+para dicidir si se reinician o conviene descartarlo.
 
 
 \begin{description}
-\item[Proyecto Puppet :]convien poner el estado de este proyetco sobre la mensa  decidir si se termina de implementr o directamente se abandona evaluando los resultados obtenidos hasta ahora.
-\item[Servidor de Correo:] con la incorporacion de personal a soporte tenico para ocuparse de las tareas dia a dia, se podrian actualizar las maquinas del personal para finalmente migrar a la nueva configuracion del servidor.
-\item[Proyecto/oficina :]se debería reasignar el proyecto a alguien de admnistración que se encargue de mantener y terminar de implementar el sistema.
+\item[Proyecto Puppet :]convien poner el estado de este proyetco sobre
+  la mensa decidir si se termina de implementr o directamente se
+  abandona evaluando los resultados obtenidos hasta ahora.
+\item[Servidor de Correo:] con la incorporacion de personal a soporte
+  tenico para ocuparse de las tareas dia a dia, se podrian actualizar
+  las maquinas del personal para finalmente migrar a la nueva
+  configuracion del servidor.
+\item[Proyecto/oficina :]se debería reasignar el proyecto a alguien de
+  admnistración que se encargue de mantener y terminar de implementar
+  el sistema.
 \end{description}
 
 \subsection*{Falta de mantenimiento en las PCs de los usuarios}
-Este problema se podría solucionar poniendo en funcionamiento el proyecto Puppet, ya que este gesiona de manera automática la configuracion de las maquinas de los usuarios.
-De ser posible esta opción debería encargarse el personal de soporte técnico.
+Este problema se podría solucionar poniendo en funcionamiento el
+proyecto Puppet, ya que este gesiona de manera automática la
+configuracion de las maquinas de los usuarios.  De ser posible esta
+opción debería encargarse el personal de soporte técnico.
 \subsection*{Relaciones comerciales}
-Proponemos que la persona encargada de mantener las relaciones comerciales posea una comunicación mas amplia con el resto del personal. jaajaja
+Proponemos que la persona encargada de mantener las relaciones
+comerciales posea una comunicación mas amplia con el resto del
+personal. jaajaja
 
 
 \end{document}
