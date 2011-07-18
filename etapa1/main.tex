@@ -28,13 +28,20 @@
 % === Inicio del documento
 % ===
 %
+%\usepackage[tight]{minitoc}
+\usepackage{tocloft}
 \begin{document}
 %crea un indice
-\tableofcontents
-\setcounter{tocdepth}{2}
+%\setcounter{tocdepth}{2}
 %
 % crear la página de título
-\maketitle
+\titlepage\maketitle
+\newpage
+%\begin{spacing}{-3}
+\tableofcontents
+%\minitoc
+%\end{spacing}
+\newpage
 %
 %\tit*{Etapa}
 %
@@ -61,7 +68,7 @@ Como se puede observar en la figura \ref{mapa-ubicación}, el rectorado
 está ubicado en la calle Bv. Pellegrini entre las calles 9 de Julio y
 San Jerónimo, en la ciudad de Santa Fe.
 
-\begin{figure}
+\begin{figure}[h]
   \center\includegraphics[width=\textwidth]{img/ubicacion_rect}
   \caption{Ubicación del Rectorado en la ciudad de Santa Fe}
   \label{mapa-ubicación}
@@ -349,7 +356,7 @@ Administración, mientras que las bases en sí son mantenidas por los
 desarrolladores de los distintos sistemas (áreas Desarrollo y
 Cómputos).
 %
-\subsection*{Software aplicativo}
+\subsection{Software aplicativo}
 %
 \subsubsection*{Software de programación}
 %
@@ -461,7 +468,7 @@ siguiente:
   para envío de spam.
 \end{itemize*}
 %
-\subsection*{Procedimientos internos de la DIPT}
+\subsection{Procedimientos internos de la DIPT}
 %
 \begin{description}
 \item[Atención a usuarios:] el siguiente esquema se sigue para brindar
@@ -506,7 +513,7 @@ compra. Además, si la compra supera los \$10000, se deberá llamar a
 licitación con una solicitud a la Dirección de Compras y
 Contrataciones.
 %
-\section{Politicas de selección, capacitación y entrenamiento de personal}
+\section{Políticas de selección, capacitación y entrenamiento de personal}
 %
 No existen políticas específicas para la selección del personal, más
 que un simple criterio basado en la idoneidad para el puesto y
@@ -540,7 +547,7 @@ Aires.
 \newpage
 \section{Problemas, necesidades e incertidumbres existentes en la organización}
 %
-\subsection*{Redundancia de los enlaces de red}
+\subsection{Redundancia de los enlaces de red}
 En ninguna parte de la topología de la red encontramos enlaces
 redundantes. Esto resulta en un riesgo alto de dejar fuera de servicio
 a sectores del Rectorado en caso de falla de una interface de red en
@@ -555,7 +562,7 @@ quedado instalados hacia varios de los switches centrales luego del
 traspaso a conexiones de fibra óptica, aunque éstos se encuentran
 desconectados y en desuso.
 %
-\subsection*{Sala de servidores}
+\subsection{Sala de servidores}
 El espacio de la sala de servidores es el adecuado para la cantidad de
 equipos que hay actualmente, sin embargo, si en un futuro se quisiera
 agregar otro rack para ampliar la capacidad operativa, no sería
@@ -567,14 +574,14 @@ acondicionador de ``back-up'' en caso que falle el principal. Este
 riesgo es particularmente alto en el verano, cuando el aire
 acondicionado funciona en toda su capacidad.
 %
-\subsection*{El espacio de trabajo del personal es reducido}
+\subsection{El espacio de trabajo del personal es reducido}
 El sector de informática con el paso del tiempo a incrementado el
 número de los puestos de trabajo. Pero el espacio de trabajo sigue
 siendo el mismo, por lo tanto el espacio físico no es suficiente. El
 mismo tiene 5[m] por 10[m] de dimensión y trabajan en este espacio 25
 personas.
 %
-\subsection*{No existe un plan de contingencia ante fallas eléctricas}
+\subsection{No existe un plan de contingencia ante fallas eléctricas}
 Actualmente no existe un plan de contingencia ante eventuales fallas
 en el suministro eléctrico. La oficina cuenta con un UPS centralizado
 que permite mantener el suministro eléctrico en las PCs de los
@@ -583,7 +590,7 @@ que ocurran fallas en los servidores luego de restablecido el
 suministro, porque el tiempo que brinda el UPS no alcanza para que los
 servidores terminen de realizar sus tareas de apagado de forma óptima.
 %
-\subsection*{No existe control de acceso físico}
+\subsection{No existe control de acceso físico}
 El acceso físico de las personas al lugar no está controlado,
 existiendo la posibilidad de que ingrese alguna persona
 malintencionada y ocurra por ejemplo robo de equipamiento. Esta
@@ -594,7 +601,7 @@ El área no posee cámaras de seguridad o algún bloqueo del tipo físico,
 como llaves o dispositivos de autorización por tarjeta/llave o
 similar, por lo tanto consideramos que existen falencias de seguridad.
 %
-\subsection*{Seguridad Lógica}
+\subsection{Seguridad Lógica}
 En todo el Rectorado la red a la que se conectan las estaciones de
 trabajo es cableada (Ethernet), no hay servicio de Wi-Fi provisto por
 la DIPT. Para el acceso a la red física, el usuario debe solicitar la
@@ -634,7 +641,7 @@ consiga enchufar su PC a la red local, tiene una capacidad
 potencial de provocar daños a los sistemas, principalmente en las PCs
 de los usuarios.
 %
-\subsection*{Proyectos abortados}
+\newpage\subsection{Proyectos abortados}
 Es bastante común encontrarnos con que los proyectos se ``congelan'' y
 se terminan abortando, lo que puede estar indicando una falta de
 coordinación y de tiempo entre las diversas áreas involucradas.
@@ -646,8 +653,30 @@ de estas áreas nos indican que se debe a la saturación de trabajo
 la planificación, investigación y capacitación necesaria para
 llevarlos adelante.
 
-
-\item[Proyecto /oficina]: si bien no podemos considerar a este
+Varios de los proyectos que forman parte de las estrategias antes
+citadas se encuentran en estado de virtual congelamiento, o de
+funcionamiento a medias.  Entre ellos encontramos:
+\begin{description}
+\item[Proyecto Puppet]: este proyecto se inició a finales del año
+  2008. Como parte del mismo participaban las áreas de administración
+  de sistemas y de soporte técnico.  Se avanzó en el proyecto durante
+  el año siguiente según estaba previsto, pero luego a partir de la
+  reducción del personal de soporte técnico y la renovación casi
+  simultánea del plantel de administración, el proyecto en su conjunto
+  ha quedado estancado.
+\item[Servidor de correo]: la actualización del servidor de correo
+  también se encuentra congelada dado que el proyecto requiere que el
+  personal de soporte técnico actualice la configuración de cada una
+  de las máquinas de los usuarios. Como el correo electrónico es un
+  servicio esencial para el trabajo del personal, esta actualización
+  debe realizarse en un tiempo corto, lo cual resulta imposible dados
+  los recursos disponibles hoy día.
+\item[Capacitación a los usuarios]: estas tareas de capacitación se
+  habían planificado como un trabajo extra del personal, coordinado
+  por la Secretaría de Coordinación del Rectorado.  Dada la escasez de
+  asignación de recursos a las mismas, hoy en día no se están llevando
+  adelante.
+\item[Proyecto ``/oficina'']: si bien no podemos considerar a este
   proyecto como abandonado, sólo se avanzó en una primera etapa de
   implementación del mismo, y actualmente éste sirve a unas 3
   oficinas. En este caso podemos considerar la falta de coordinación
@@ -655,7 +684,7 @@ llevarlos adelante.
   origen del problema.
 \end{description}
 %
-\subsection*{Falta de mantenimiento en las PCs de los usuarios}
+\subsection{Falta de mantenimiento en las PCs de los usuarios}
 Este es un problema que se ha puesto en evidencia a partir de la
 publicación de la nueva versión estable del sistema operativo Debian
 GNU/Linux, usado en la mayoría de las estaciones de trabajo en febrero
@@ -677,7 +706,7 @@ iniciado dos años atrás.
 %% disponible. Además, a los usuarios de estos sistemas se les brinda
 %% escasa capacitación respecto del funcionamiento de los mismos.
 %
-\subsection*{Relaciones comerciales}
+\subsection{Relaciones comerciales}
 Por último, hemos detectado que en la parte administración existe una
 única persona encargada de manejar todas las relaciones comerciales
 con los proveedores, lo que significa que no existe un control de
@@ -686,7 +715,7 @@ ausenta se complican cosas tan corrientes como encargar la recarga de
 un tóner.
 \newpage
 \section{Plan de Mejoras}
-\subsection*{Redundancia de los enlaces de red}
+\subsection{Redundancia de los enlaces de red}
 Recomendamos agregar enlaces redundantes a la red de área local, al
 menos en enlaces principales. A este efecto se deberá considerar la
 posibilidad de utilizar los enlaces de cobre preexistentes a la fibra,
@@ -701,7 +730,7 @@ También es de vital importancia dotar de redundancia a los enlaces y
 switches de la sala de servidores, esto además traerá la ventaja del
 aumento de velocidad de los mismos.
 %
-\subsection*{Sala de servidores}
+\subsection{Sala de servidores}
 Se deberá considerar la expansión de la sala de servidores. Para esto
 se deberán evaluar tres posiblidades, una de ellas es reubicar el área
 de soporte técnico en otra oficina dentro del mismo rectorado y así
@@ -716,7 +745,7 @@ puede ser la Secretaría de Extensión Universitaria.
 También se hace imperativo instalar otro equipo de aire acondicionado,
 para salvaguarda del existente en caso de alguna falla.
 %
-\subsection*{El espacio de trabajo del personal es reducido}
+\subsection{El espacio de trabajo del personal es reducido}
 Dado que la oficina DIPT cuenta con tres áreas: administración y
 desarrollo, soporte técnico y cómputos, se podría replantear la
 ubicación de los recursos humanos de cada área. Dado que el personal
@@ -724,23 +753,40 @@ de administración y desarrollo es mas numeroso, proponemos reubicar a
 los empleados de soporte técnico y de cómputos hacia otras oficinas y
 así mejorar el espacio de trabajo en la oficina actual.
 %
-\subsection*{No existen un plan de contingencia ante fallas eléctricas}
-Se deberá elaborar un plan de contingencia, el cual tenga en cuenta las siguientes pautas:
+\newpage
+\subsection{No existe un plan de contingencia ante fallas eléctricas}
+Se deberá elaborar un plan de contingencia, el cual tenga en cuenta
+las siguientes pautas:
 \begin{description}
-\item [Plan de Reducción de Riesgos :] comprobar el estado de las líneas y reemplazar aquellas que se encuentren en mal estado. Modificar la instalación eléctrica de la oficina, separando los tomas para el equipamiento informático de aquellos de uso general. Terminar de colocar el grupo electrógeno adquirido recientemente. Colocar en lugares estratégicos y debidamente señalizado los elementos para combatir posibles incendios producidos por fallas eléctricas.
-\item [Actividades a realizar durante la falla :] tener a mano los teléfonos de la EPE y de electricistas matriculados para identificar el problema.
-\item [Actividades a realizar después de la falla :] Identificar los elementos dañados, repararlos o en su defecto reemplazarlos. Auditar las condiciones del tendido eléctrico en las zonas afectadas.
-\item [Evaluación de los resultados :] luego de llevado a cabo el plan de contingencia se debe evaluar los resultados obtenidos y optimizar el plan de acción original mejorando las actividades que tuvieron algún tipo de dificultad (retroalimentación del plan de acción).
+\item [Plan de Reducción de Riesgos]: comprobar el estado de las
+  líneas y reemplazar aquellas que se encuentren en mal
+  estado. Modificar la instalación eléctrica de la oficina, separando
+  los tomas para el equipamiento informático de aquellos de uso
+  general. Terminar de colocar el grupo electrógeno adquirido
+  recientemente. Colocar en lugares estratégicos y debidamente
+  señalizado los elementos para combatir posibles incendios producidos
+  por fallas eléctricas.
+\item [Actividades a realizar durante la falla]: tener a mano los
+  teléfonos de la EPE y de electricistas matriculados para identificar
+  el problema.
+\item [Actividades a realizar después de la falla]: Identificar los
+  elementos dañados, repararlos o en su defecto reemplazarlos. Auditar
+  las condiciones del tendido eléctrico en las zonas afectadas.
+\item [Evaluación de los resultados]: luego de llevado a cabo el plan
+  de contingencia se debe evaluar los resultados obtenidos y optimizar
+  el plan de acción original mejorando las actividades que tuvieron
+  algún tipo de dificultad (retroalimentación del plan de acción).
 \end{description}
 %
-\subsection*{No existe control de acceso físico}
+\subsection{No existe control de acceso físico}
 Es conveniente colocar cámaras de seguridad para monitorear el espacio
 de trabajo de la oficina. Pero para controlar el acceso a la sala de
 servidores, es conveniente tener mayor seguridad. Esto se lograría
 colocando llave o un control de acceso mediante un sistema de
 detección de huellas digitales.
 %
-\subsection*{Seguridad lógica}
+\newpage
+\subsection{Seguridad lógica}
 Se deberá investigar la factibilidad de incorporar tecnología de
 autenticación mediante un servidor RADIUS a la red de área local.
 Esta no será una tarea menor, ya que se hace necesario configurar todos
@@ -790,8 +836,8 @@ Una vez puesto en funcionamiento el sistema se deberán realizar
 capacitaciones a los puestos de trabajo, persuadiéndolos de las
 ventajas de utilizar este sistema en lugar de utilizar el servicio
 (inseguro) de carpetas compartidas de Windows.
-
-\subsection*{Proyectos abortados}
+\newpage
+\subsection{Proyectos abortados}
 Proponemos implementar un sistema de seguimiento de proyectos, el cual
 debe reunir las siguientes características:
 \begin{itemize*}
@@ -813,23 +859,24 @@ virtualmente congelados para dicidir si se reinician o conviene
 descartarlos.
 
 \begin{description}
-\item[Proyecto Puppet :]Conviene poner el estado de este proyetco
+\item[Proyecto Puppet]: Conviene poner el estado de este proyetco
   sobre la mesa decidir si se termina de implementar o directamente se
   abandona evaluando los resultados obtenidos hasta ahora.
-\item[Servidor de Correo:] Con la incorporación de personal al área de
+\item[Servidor de Correo]: Con la incorporación de personal al área de
   soporte técnico para ocuparse de las tareas de rutina, se podrían
   actualizar las máquinas del personal para finalmente migrar a la
   nueva configuración del servidor.
-\item[Proyecto/oficina :]Se debería reasignar el proyecto a una persona de
-  admnistración que se encargue de terminar de implementar y mantener el sistema.
+\item[Proyecto ``/oficina'']: Se debería reasignar el proyecto a una
+  persona de admnistración que se encargue de terminar de implementar
+  y mantener el sistema.
 \end{description}
 
-\subsection*{Falta de mantenimiento en las PCs de los usuarios}
+\subsection{Falta de mantenimiento en las PCs de los usuarios}
 Este problema se podría solucionar poniendo en funcionamiento el
 proyecto Puppet, ya que éste gestiona de manera automática la
 configuración de las máquinas de los usuarios.  De ser posible esta
 opción, debería encargarse el personal de soporte técnico.
-\subsection*{Relaciones comerciales}
+\subsection{Relaciones comerciales}
 Se hace conveniente establecer un sistema de gestión de los vínculos
 comerciales (este puede ser tan sencillo como una planilla de
 cálculo), en donde quede registrado el estado de los pedidos, pagos
@@ -837,7 +884,7 @@ etc. A este documento tendrían que tener acceso dos o tres personas del
 área de administración y el jefe de la oficina.
 
 \newpage
-\section*{Conclusión}
+\section{Conclusión}
 En este trabajo hemos presentado un relevamiento del área de
 Informática del Rectorado de la UNL.
 
