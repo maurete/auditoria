@@ -1,0 +1,401 @@
+\documentclass[spanish]{beamer}
+
+\include{conf/preconfig}
+\include{conf/packages}
+
+\include{beamerconf}
+\usetheme{Bergen}
+\usecolortheme{orchid}
+
+\title{Auditoría Informática}
+\subtitle{Trabajo Final}
+\author{Romina V. Galarza \and M. Nicolás Mastaglia \and Mauro J. Torrez}
+\date{\today}
+
+\begin{document}
+
+
+\frame{\selectlanguage{spanish}\titlepage}
+
+\section{Introducción}
+
+\begin{frame}{Introducción}
+    \begin{itemize}
+    \item Lugar elegido para la realización del TP:
+    \end{itemize}
+Rectorado de la Universidad Nacional del Litoral
+\end{frame}
+
+
+\begin{frame}{Desarrollo}
+  \large Problemas, necesidades e incertidumbres existentes en la
+  Organización. Propuestas de solución.
+\end{frame}
+
+
+\section[Outline]{Problemas y soluciones propuestas}
+
+\subsection[Outline]{Enlaces de red}
+
+\begin{frame}{Enlaces de red}
+  \begin{itemize}
+  \item Problema:
+    \begin{itemize}
+    \item No se encontraron enlaces redundantes en la red.
+    \end{itemize}
+  \item Riesgos:
+    \begin{itemize}
+    \item Dejar fuera de servicio a sectores del Rectorado.
+    \end{itemize}
+  \item Propuesta:
+    \begin{itemize}
+    \item Agregar enlaces redundantes a la red de área local
+        \item Utilizar los enlaces preexistentes.
+          \begin{itemize}
+          \item Colocar enlaces nuevos: cobre, fibra, inalámbricos.
+          \item Redundancia de enlaces y switches en la sala de
+            servidores.
+          \end{itemize}
+        \item Consecuencia adicional: aumento de la velocidad en
+          funcionamiento normal.
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+
+\section[Outline]{Sala de servidores}
+
+\begin{frame}{Sala de servidores}
+  \begin{itemize}
+  \item Problema:
+    \begin{itemize}
+    \item El espacio es reducido
+    \end{itemize}
+    \item Riesgos:
+      \begin{itemize}
+      \item Imposibilidad de expansión de la sala
+      \end{itemize}
+  \item Propuesta:
+    \begin{itemize}
+    \item Se evaluaron tres posiblidades:
+      \begin{itemize}
+      \item Reubicar el área de soporte técnico
+      \item Realizar una reforma edilicia
+      \item Mudar la sala de servidores
+      \end{itemize}
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Sala de servidores}
+  \begin{itemize}
+  \item Problema:
+    \begin{itemize}
+    \item No existe un acondicionador de aire de ``back-up''
+    \end{itemize}
+    \item Riesgos:
+      \begin{itemize}
+      \item Interrupción del servicio
+      \item Recalentamiento de equipos
+      \end{itemize}
+  \item Propuesta:
+    \begin{itemize}
+    \item Instalar otro equipo de aire acondicionado
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+
+\section{Espacio de trabajo}
+
+\begin{frame}{Espacio de trabajo}
+  \begin{itemize}
+    \item Problema:
+      \begin{itemize}
+      \item Se incrementó el número de puestos de trabajo
+        manteniendose el mismo espacio físico
+      \end{itemize}
+    \item Propuesta:
+      \begin{itemize}
+        %% \item Reubicación de los recursos humanos de cada área:
+        %%   \begin{enumerate}
+        %%   \item Administración y Desarrollo.
+        %%   \item Soporte Técnico.
+        %%   \item Cómputos.
+        %%   \end{enumerate}
+        \item Reubicar a los empleados de soporte técnico y de cómputos
+          hacia otras oficinas dado que son los menos numerosos.
+      \end{itemize}
+    \end{itemize}
+\end{frame}
+
+
+\section{Plan de contingencia eléctrico}
+
+\begin{frame}{Seguridad eléctrica}
+  \begin{itemize}
+  \item Problemas:
+    \begin{itemize}
+    \item No existe un plan de contingencia ante fallas
+      %en el suministro eléctrico
+    \item UPS mal conectado
+    \item Grupo electrógeno sin conectar
+    \end{itemize}
+  \item Riesgos:
+    \begin{itemize}
+    \item Pérdida de datos
+    \item Daño a los equipos informáticos y al UPS
+    \end{itemize}
+  \item Propuesta:
+    \begin{itemize}
+    \item Plan de reducción de riesgos:
+      \begin{itemize}
+      \item Reformar el cableado para que el UPS alimente sólo el equipamiento informático
+      \item Conectar el grupo electrógeno al circuito
+      \end{itemize}
+    \item Plan de contingencia: % que tenga las siguientes pautas:
+      \begin{itemize}
+      \item Actividades a realizar durante la falla
+      \item Actividades a realizar después de la falla
+      \item Evaluación de los resultados y retroalimentación %del plan de acción).
+      \end{itemize}
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+
+\section{Control de acceso físico}
+
+\begin{frame}{Seguridad física}
+  \begin{itemize}
+  \item Problema:
+    \begin{itemize}
+    \item No existe control de acceso físico
+    \end{itemize}
+  \item Riesgos:
+    \begin{itemize}
+    \item Ingreso de personal no autrizado
+    \item Robo de equipamiento
+    \item Robo de información
+    \end{itemize}
+  \item Propuesta:
+    \begin{itemize}
+    \item Colocar cámaras de seguridad
+    \item Colocar dispositivo de control de acceso a la sala de
+      servidores.
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+
+\section{Seguridad Lógica}
+
+\begin{frame}{Seguridad lógica}
+  \begin{itemize}
+  \item Problema:
+    \begin{itemize}
+    \item Falta de autenticación en la red local
+    \end{itemize}
+  \item Riesgo:
+    \begin{itemize}
+    \item Cualquiera puede ganar acceso a la red solo conectando una
+      PC
+    \end{itemize}
+  \item Propuesta:
+    %% %% Investigar una posible incorporación de tecnología de
+    %% autenticación mediante %% un servidor RADIUS a la red de área
+    %% local. Esta no será una tarea menor, ya %% que se hace necesario
+    %% configurar todos los equipos de la red, desde %% servidores hasta
+    %% las impresoras en red, incluyendo las PCs de los puestos de %%
+    %% trabajo y los switches.
+    \begin{itemize}
+    \item Evaluar factibilidad de implementación de tecnologías de
+      autenticación (RADIUS, Kerberos, etc.)
+    \item Diseñar un plan de implementación gradual
+      %%  \begin{enumerate}
+      %%  \item Comenzar por servicios que manejan información crítica
+      %%  \item Seguir por los sistemas que manejan información
+      %%    confidencial pero no crítica
+      %%  \item Finalmente, incorporar al resto de los usuarios y el
+      %%    equipamiento como impresoras de red, lo cual traería consigo
+      %%    el beneficio de que todos los usuarios podrán estar seguros
+      %%    que el entorno de red al que se conectan es fiable y
+      %%    controlado.
+      %% \end{enumerate}
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Seguridad lógica: servicio LDAP}
+  \begin{itemize}
+  \item Problema:
+    \begin{itemize}
+    \item Las claves de los usuarios se transportan en la red sin encriptación
+    \end{itemize}
+  \item Riesgo:
+    \begin{itemize}
+    \item Obtención de claves mediante \emph{sniffing}
+    \end{itemize}
+  \item Propuesta:
+    \begin{itemize}
+    \item Configurar la utilización del servicio LDAP a través de HTTP seguro (HTTPS)
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Seguridad lógica: servidor de correo}
+  \begin{itemize}
+  \item Problemas:
+    \begin{itemize}
+    \item Seguridad optativa en conexiones POP e IMAP
+    \item Servidor de salida SMTP no autenticado
+    \end{itemize}
+  \item Riesgos:
+    \begin{itemize}
+    \item Obtención de claves mediante inspección de paquetes
+    \item ``Toma'' del servidor de salida para envío masivo de correos basura
+    \end{itemize}
+  \item Propuesta:
+    \begin{itemize}
+    \item Incorporar autenticación al servidor de salida SMTP
+    \item Establecer cuota máxima por usuario
+    \item Inhabilitar las conexiones no seguras
+    \item Desafío estilo CAPTCHA para la interfaz webmail
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Seguridad lógica: archivos compartidos}
+  \begin{itemize}
+  \item Problema:
+    \begin{itemize}
+    \item Los usuarios de Windows comparten archivos de forma insegura
+    \end{itemize}
+  \item Riesgo:
+    \begin{itemize}
+    \item Robo de información confidencial
+    \end{itemize}
+  \item Propuesta:
+    \begin{itemize}
+    \item Implementar un sistema centralizado de manejo de documentos
+    \item Capacitar a los usuarios para que utilicen el sistema
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+
+\section{Proyectos abortados}
+\begin{frame}
+  \begin{itemize}
+  \item Problema:
+    \begin{itemize}
+    \item Muchos proyectos se ``congelan'' y se terminan abortando
+    \end{itemize}
+  \item Riesgos:
+    \begin{itemize}
+    \item Horas de trabajo invertidas no productivas
+    \end{itemize}
+  \item Propuesta:
+    \begin{itemize}
+    \item Sistema de seguimiento de proyectos:
+      \begin{enumerate}
+      \item Un plan de tareas con fechas estimadas de concreción
+      \item Alarmas de incumplimiento
+      \end{enumerate}
+    \item Manual de procedimiento para proyectos nuevos
+    \item Incorporar personal a Soporte Técnico y Administración
+    \item Evaluar estado actual y viabilidad de los proyectos:
+      \begin{itemize}
+      \item Puppet
+      \item Servidor de correo
+      \item Capacitación a los usuarios
+      \item Proyecto ``/oficina''
+      \end{itemize}
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+
+\section{Mantenimiento en PCs de los usuarios}
+\begin{frame}{Mantenimiento en las PCs de usuarios}
+  \begin{itemize}
+  \item Problema:
+    \begin{itemize}
+    \item Falta mantenimiento en las PCs de los usuarios
+    \end{itemize}
+  \item Riesgos:
+    \begin{itemize}
+    \item Administrabilidad reducida
+    \item Problemas de compatibilidad de programas
+    \item Mayor demanda de soporte técnico
+    \end{itemize}
+  \item Propuesta:
+    \begin{itemize}
+    \item Actualizar y estandarizar configuración en los equipos
+    \item Reactivar el proyecto Puppet, o encarar uno nuevo con
+      similares objetivos
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+
+\section{Relaciones comerciales}
+\begin{frame}{Relaciones comerciales}
+  \begin{itemize}
+  \item Problema:
+    \begin{itemize}
+    \item Una única persona maneja las relaciones con proveedores
+    \end{itemize}
+  \item Riesgo:
+    \begin{itemize}
+    \item Demora en caso de ausencia
+    \end{itemize}  
+  \item Propuesta:
+    \begin{itemize}
+    \item Documentar operaciones efectuadas
+    \item Mantener un registro con datos de los proveedores
+    \item Asignar acceso a estos datos a una o dos personas más
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+
+\section{Conclusión}
+\begin{frame}{Conclusión}
+  \begin{itemize}
+  \item Se llevan a cabo buenas prácticas en lo que refiere a la seguridad de
+    los sistemas, aunque se han encontrado algunos puntos débiles.
+  \item Los problemas mayores son la insuficiencia de espacio físico, tanto
+    para la sala de servidores como para el personal.
+  \item Otro de los puntos generales de los problemas es la falta de normativa
+    en los procedimientos, así como la escasa capacitación.
+  %% \item Se sugiere llevar a cabo las tareas propuestas en el Plan de Mejoras
+  %%   para lograr satisfacer las demandas actuales de los usuarios y reducir el
+  %%   riesgo en lo que a respecta a la seguridad de los sistemas informáticos.
+  \end{itemize}
+\end{frame}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
